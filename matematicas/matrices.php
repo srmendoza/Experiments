@@ -207,6 +207,15 @@ function transpuesta($mat)
 	}
 }
 
+function inversa($mat)
+{
+	$tam = count($mat);
+	for($i=0; $i<$tam; $i++)
+	{
+		
+	}
+}
+
 function gauss_jordan($mat)
 {
 	

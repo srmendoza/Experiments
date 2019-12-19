@@ -30,6 +30,7 @@ function elliptic_multiply($p, $n)
 	}
 	
 	}
+	/*
  N ? P
   Q ? 0
   for i from 0 to m do
@@ -37,8 +38,8 @@ function elliptic_multiply($p, $n)
 		 Q ? point_add(Q, N)
 	 N ? point_double(N)
   return Q
-  
-  
+*/
+
 
 function hypereilliptic()
 {
