@@ -9,7 +9,7 @@ DirectoryIndex index.php index.html
 # Deny from xxx.xxx.xxx.xxx
 
 <IfModule mod_headers.c>
-   RequestHeader unset Proxy
+	RequestHeader unset Proxy
 </IfModule>
 
 Header always append X-Frame-Options SAMEORIGIN

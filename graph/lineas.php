@@ -92,8 +92,7 @@ function lineas_agrupada_svg($valores, $ancho, $largo)
 			$x2 = $ancho_columna+$x1;
 			$y2 = $y_zero - $valores[$i][$j]*$altura_columna;
 			echo " $x2,$y2";
-			$x1 = $x2;
-			$y1 = $y2;
+			$cor1->reset($cor2->x, $cor2->y);
 		}
 		echo "' style='stroke:$color; stroke-width:2; fill:none;'></polyline>";
 	}
@@ -128,8 +127,7 @@ function lineas_marcas_agrupada_svg($valores, $ancho, $largo)
 			$y2 = $y_zero - $valores[$i][$j]*$altura_columna;
 			echo "<line x1='$x1' y1='$y1' x2='$x2' y2='$y2' style='stroke:$color; stroke-width:2;'></line>";
 			echo "<circle cx='$x2' cy='$y2' r='$radio' style='stroke:black; stroke-width:2; fill:$color'></circle>";
-			$x1 = $x2;
-			$y1 = $y2;
+			$cor1->reset($cor2->x, $cor2->y);
 		}
 	}
 	echo "</svg>";
@@ -162,8 +160,7 @@ function lineas__svg($valores, $ancho, $largo)
 			$x2 = $ancho_columna+$x1;
 			$y2 = $y_zero - $valores[$i][$j]*$altura_columna;
 			echo " $x2,$y2";
-			$x1 = $x2;
-			$y1 = $y2;
+			$cor1->reset($cor2->x, $cor2->y);
 		}
 		echo "' style='stroke:$color; stroke-width:2; fill:none;'></polyline>";
 	}
@@ -198,8 +195,7 @@ function lineas_marcas__svg($valores, $ancho, $largo)
 			$y2 = $y_zero - $valores[$i][$j]*$altura_columna;
 			echo "<line x1='$x1' y1='$y1' x2='$x2' y2='$y2' style='stroke:$color; stroke-width:2;'></line>";
 			echo "<circle cx='$x2' cy='$y2' r='$radio' style='stroke:black; stroke-width:2; fill:$color'></circle>";
-			$x1 = $x2;
-			$y1 = $y2;
+			$cor1->reset($cor2->x, $cor2->y);
 		}
 	}
 	echo "</svg>";

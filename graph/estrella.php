@@ -106,8 +106,7 @@ function estrella_multi_svg($valores, $ancho, $largo)
 			$ry = $ct->y + $radio*coseno($angulo);
 			echo "<line x1='$x1' y1='$y1' x2='$x2' y2='$y2' style='stroke:$color; stroke-width:2;'></line>";
 			echo "<line x1='$ct->x' y1='$ct->y' x2='$rx' y2='$ry' style='stroke:$color; stroke-width:2;'></line>";
-			$x1 = $x2;
-			$y1 = $y2;
+			$cor1->reset($cor2->x, $cor2->y);
 		}
 	}
 	echo "</svg>";
@@ -149,8 +148,7 @@ function estrella_marcas_multi_svg($valores, $ancho, $largo)
 			echo "<line x1='$x1' y1='$y1' x2='$x2' y2='$y2' style='stroke:$color; stroke-width:2;'></line>";
 			echo "<line x1='$ct->x' y1='$ct->y' x2='$rx' y2='$ry' style='stroke:$color; stroke-width:2;'></line>";
 			echo "<circle cx='$x2' cy='$y2' r='$radio_marca' style='stroke:black; stroke-width:2; fill:$color'></circle>";
-			$x1 = $x2;
-			$y1 = $y2;
+			$cor1->reset($cor2->x, $cor2->y);
 		}
 	}
 	echo "</svg>";
