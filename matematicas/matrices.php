@@ -122,7 +122,7 @@ function multimatcube($mat1, $mat2, $mat3, $m)
 		{
 			for($k = 0; $k < $m; $k++)
 			{
-				for ($l = 0; $l < $m; $l++)
+				for($l = 0; $l < $m; $l++)
 				{
 					$matrizr[$i][$j][$k] = $matrizr[$i][$j][$k] + ($mat1[$i][$j][$l] * $mat2[$i][$l][$k] * $mat3[$l][$j][$k]);
 				}

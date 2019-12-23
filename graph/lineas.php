@@ -19,12 +19,12 @@ function lineas_svg($valores, $ancho, $largo)
 	yzero_line($y_zero, $ancho);
 	$x1 = 0;//inicial
 	$y1 = $y_zero;//inicial
-	echo "<polyline points='$x1,$y1";
+	echo "<polyline points='$x1, $y1";
 	for($i = 1; $i<=$m; $i++)
 	{
 		$x2 = $ancho_columna+$x1;
 		$y2 = $y_zero - $valores[$i-1]*$altura_columna;
-		echo " $x2,$y2";
+		echo " $x2, $y2";
 		$x1 = $x2;
 		$y1 = $y2;
 	}
@@ -86,12 +86,12 @@ function lineas_agrupada_svg($valores, $ancho, $largo)
 		$x1 = 0;//inicial
 		$y1 = $valores[$i][0]*$altura_columna+$y_zero;//inicial
 		$color = $lista_color[$i%$m];
-		echo "<polyline points='$x1,$y1";
+		echo "<polyline points='$x1, $y1";
 		for($j = 0; $j<$n; $j++)
 		{
 			$x2 = $ancho_columna+$x1;
 			$y2 = $y_zero - $valores[$i][$j]*$altura_columna;
-			echo " $x2,$y2";
+			echo " $x2, $y2";
 			$cor1->reset($cor2->x, $cor2->y);
 		}
 		echo "' style='stroke:$color; stroke-width:2; fill:none;'></polyline>";
@@ -154,12 +154,12 @@ function lineas__svg($valores, $ancho, $largo)
 		$x1 = 0;//inicial
 		$y1 = $valores[$i][0]*$altura_columna+$y_zero;//inicial
 		$color = $lista_color[$i%$m];
-		echo "<polyline points='$x1,$y1";
+		echo "<polyline points='$x1, $y1";
 		for($j = 0; $j<$n; $j++)
 		{
 			$x2 = $ancho_columna+$x1;
 			$y2 = $y_zero - $valores[$i][$j]*$altura_columna;
-			echo " $x2,$y2";
+			echo " $x2, $y2";
 			$cor1->reset($cor2->x, $cor2->y);
 		}
 		echo "' style='stroke:$color; stroke-width:2; fill:none;'></polyline>";

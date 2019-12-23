@@ -182,7 +182,7 @@ function yzero_line($zero, $ancho)
 
 function marco_grafica($ancho, $largo)
 {
-	echo "<polyline points='0,0  0,$ancho  $largo,$ancho  $largo,0' style='stroke:black; stroke-width:2; fill:none;'></polyline>";
+	echo "<polyline points='0,0  0, $ancho  $largo, $ancho  $largo,0' style='stroke:black; stroke-width:2; fill:none;'></polyline>";
 }
 
 function leyenda($ancho, $largo, $valores, $colores)

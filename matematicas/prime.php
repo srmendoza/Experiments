@@ -1,5 +1,5 @@
 <?php
-function coprime($primos,$size, &$valor,&$var)
+function coprime($primos, $size, &$valor,&$var)
 {
 	$num=[];
 	$num[0]=1;
@@ -36,7 +36,7 @@ function prime($x, $y)
 	$primos=[2,3,5,7,11,13,17,19,23,29];
 	$tam=$y;
 	$size=1;
-	$coprimo=coprime($primos,$tam,$valor,$size);
+	$coprimo=coprime($primos, $tam, $valor, $size);
 	$k=0;
 	$i=$tam;
 	do

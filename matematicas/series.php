@@ -185,7 +185,7 @@ function rares($x)//revisar
 	{
 		for($i=1; $i<$x; $i++)
 		{
-			$num = $num + comb(2*$i,$i);
+			$num = $num + comb(2*$i, $i);
 		}
 	}
 	return $num;

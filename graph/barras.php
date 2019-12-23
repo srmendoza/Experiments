@@ -25,7 +25,7 @@ function verticales_svg($valores, $ancho, $largo)
 		$x2 = $ancho_columna+$x1;
 		$y2 = $y_zero -$valores[$i]*$altura_columna;
 		$color = $lista_color[$i];
-		echo "<polygon points='$x1,$y1 $x1,$y2 $x2,$y2 $x2,$y1' style='stroke:$color; stroke-width:2; fill:$color'></polygon>";
+		echo "<polygon points='$x1, $y1 $x1, $y2 $x2, $y2 $x2, $y1' style='stroke:$color; stroke-width:2; fill:$color'></polygon>";
 		$x1 = $x2;
 	}
 	echo "</svg>";
@@ -60,7 +60,7 @@ function verticales_agrupada_svg($valores, $ancho, $largo)
 			$color = $lista_color[$j%$m];
 			$x2 = $ancho_columna+$x1;
 			$y2 = $y1 - (($valores[$i][$j])*$altura_columna);
-			echo "<polygon points='$x1,$y1 $x1,$y2 $x2,$y2 $x2,$y1' style='stroke:black; stroke-width:2; fill:$color'></polygon>";
+			echo "<polygon points='$x1, $y1 $x1, $y2 $x2, $y2 $x2, $y1' style='stroke:black; stroke-width:2; fill:$color'></polygon>";
 			$x1 = $x2;
 		}
 		$x1 = $x1 + $ancho_columna;
@@ -92,7 +92,7 @@ function verticales_apilada_svg($valores, $ancho, $largo)
 	{
 		$x2 = $ancho_columna+$x1;
 		$y2 = $y1 - (($valores[$i-1])*$altura_columna);
-		echo "<polygon points='$x1,$y1 $x1,$y2 $x2,$y2 $x2,$y1' style='stroke:black; stroke-width:2; fill:black'></polygon>";
+		echo "<polygon points='$x1, $y1 $x1, $y2 $x2, $y2 $x2, $y1' style='stroke:black; stroke-width:2; fill:black'></polygon>";
 		$x1 = $x2;
 	}
 	echo "</svg>";
@@ -120,7 +120,7 @@ function verticales__svg($valores, $ancho, $largo)
 	{
 		$x2 = $ancho_columna+$x1;
 		$y2 = $y1 - (($valores[$i-1])*$altura_columna);
-		echo "<polygon points='$x1,$y1 $x1,$y2 $x2,$y2 $x2,$y1' style='stroke:black; stroke-width:2; fill:black'></polygon>";
+		echo "<polygon points='$x1, $y1 $x1, $y2 $x2, $y2 $x2, $y1' style='stroke:black; stroke-width:2; fill:black'></polygon>";
 		$x1 = $x2;
 	}
 	echo "</svg>";
@@ -153,7 +153,7 @@ function horizontales_svg($valores, $ancho, $largo)
 		$x2 = $x_zero + $valores[$i-1]*$altura_columna;
 		$y2 = $ancho_columna + $y1;
 		$color = $lista_color[$i-1];
-		echo "<polygon points='$x1,$y1 $x2,$y1 $x2,$y2 $x1,$y2' style='stroke:$color; stroke-width:2; fill:$color'></polygon>";
+		echo "<polygon points='$x1, $y1 $x2, $y1 $x2, $y2 $x1, $y2' style='stroke:$color; stroke-width:2; fill:$color'></polygon>";
 		$y1 = $y2;
 	}
 	echo "</svg>";
@@ -182,7 +182,7 @@ function horizontales_agrupada_svg($valores, $ancho, $largo)
 	{
 		$x2 = ($valores[$i-1])*$altura_columna + $x1;
 		$y2 = $ancho_columna + $y1;
-		echo "<polygon points='$x1,$y1 $x2,$y1 $x2,$y2 $x1,$y2' style='stroke:black; stroke-width:2; fill:black'></polygon>";
+		echo "<polygon points='$x1, $y1 $x2, $y1 $x2, $y2 $x1, $y2' style='stroke:black; stroke-width:2; fill:black'></polygon>";
 		$y1 = $y2;
 	}
 	echo "</svg>";
@@ -211,7 +211,7 @@ function horizontales_apilada_svg($valores, $ancho, $largo)
 	{
 		$x2 = ($valores[$i-1])*$altura_columna + $x1;
 		$y2 = $ancho_columna + $y1;
-		echo "<polygon points='$x1,$y1 $x2,$y1 $x2,$y2 $x1,$y2' style='stroke:black; stroke-width:2; fill:black'></polygon>";
+		echo "<polygon points='$x1, $y1 $x2, $y1 $x2, $y2 $x1, $y2' style='stroke:black; stroke-width:2; fill:black'></polygon>";
 		$y1 = $y2;
 	}
 	echo "</svg>";
@@ -239,7 +239,7 @@ function horizontales__svg($valores, $ancho, $largo)
 	{
 		$x2 = ($valores[$i-1])*$altura_columna + $x1;
 		$y2 = $ancho_columna + $y1;
-		echo "<polygon points='$x1,$y1 $x2,$y1 $x2,$y2 $x1,$y2' style='stroke:black; stroke-width:2; fill:black'></polygon>";
+		echo "<polygon points='$x1, $y1 $x2, $y1 $x2, $y2 $x1, $y2' style='stroke:black; stroke-width:2; fill:black'></polygon>";
 		$y1 = $y2;
 	}
 	echo "</svg>";

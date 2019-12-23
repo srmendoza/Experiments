@@ -28,10 +28,10 @@ function pastel_svg($valores, $ancho, $largo)
 		$qy = $ct->y + $radio * seno($control);
 		$x2 = $ct->x + $radio * coseno($angulo);
 		$y2 = $ct->y + $radio * seno($angulo);
-		//M $x2,$y2 L $ct->x,$ct->y
+		//M $x2, $y2 L $ct->x, $ct->y
 		$color = $lista_color[$i%$m];
-		echo "<path d='M $ct->x,$ct->y L $x1,$y1 L $x2,$y2 L $ct->x,$ct->y Z' style='stroke:$color; stroke-width:0; fill:$color'></path>";
-		echo "<path d='M $ct->x,$ct->y L $x1,$y1 M $x1,$y1 A $radio,$radio 0 0,1 $qx,$qy A $radio,$radio 0 0,1 $x2,$y2 M $x2,$y2 L $ct->x,$ct->y Z' style='stroke:black; stroke-width:2; fill:$color'></path>";
+		echo "<path d='M $ct->x, $ct->y L $x1, $y1 L $x2, $y2 L $ct->x, $ct->y Z' style='stroke:$color; stroke-width:0; fill:$color'></path>";
+		echo "<path d='M $ct->x, $ct->y L $x1, $y1 M $x1, $y1 A $radio, $radio 0 0,1 $qx, $qy A $radio, $radio 0 0,1 $x2, $y2 M $x2, $y2 L $ct->x, $ct->y Z' style='stroke:black; stroke-width:2; fill:$color'></path>";
 		$x1 = $x2;
 		$y1 = $y2;
 	}
@@ -69,10 +69,10 @@ function anillo_svg($valores, $ancho, $largo)
 		$qy = $ct->y + $inner_radio * seno($control);
 		$x2 = $ct->x + $inner_radio * coseno($angulo);
 		$y2 = $ct->y + $inner_radio * seno($angulo);
-		//M $x2,$y2 L $ct->x,$ct->y
+		//M $x2, $y2 L $ct->x, $ct->y
 		$color = $lista_color[$i%$m];
-		echo "<path d='M $ct->x,$ct->y L $x1,$y1 L $x2,$y2 L $ct->x,$ct->y Z' style='stroke:$color; stroke-width:0; fill:$color'></path>";
-		echo "<path d='M $ct->x,$ct->y L $x1,$y1 M $x1,$y1 A $radio,$radio 0 0,1 $qx,$qy A $radio,$radio 0 0,1 $x2,$y2 M $x2,$y2 L $ct->x,$ct->y Z' style='stroke:black; stroke-width:2; fill:$color'></path>";
+		echo "<path d='M $ct->x, $ct->y L $x1, $y1 L $x2, $y2 L $ct->x, $ct->y Z' style='stroke:$color; stroke-width:0; fill:$color'></path>";
+		echo "<path d='M $ct->x, $ct->y L $x1, $y1 M $x1, $y1 A $radio, $radio 0 0,1 $qx, $qy A $radio, $radio 0 0,1 $x2, $y2 M $x2, $y2 L $ct->x, $ct->y Z' style='stroke:black; stroke-width:2; fill:$color'></path>";
 		$x1 = $x2;
 		$y1 = $y2;
 	}
@@ -118,10 +118,10 @@ function pastel_sub_svg($valores, $ancho, $largo)
 		$qy = $ct->y1 + $radio1 * seno($control);
 		$x2 = $ct->x1 + $radio1 * coseno($angulo);
 		$y2 = $ct->y1 + $radio1 * seno($angulo);
-		//M $x2,$y2 L $ct->x,$ct->y
+		//M $x2, $y2 L $ct->x, $ct->y
 		$color = $lista_color[$i%$m1];
-		echo "<path d='M $ct->x1,$ct->y1 L $x1,$y1 L $x2,$y2 L $ct->x,$ct->y Z' style='stroke:$color; stroke-width:0; fill:$color'></path>";
-		echo "<path d='M $ct->x1,$ct->y1 L $x1,$y1 M $x1,$y1 A $radio1,$radio1 0 0,1 $qx,$qy A $radio1,$radio1 0 0,1 $x2,$y2 M $x2,$y2 L $ct->x1,$ct->y1 Z' style='stroke:black; stroke-width:2; fill:$color'></path>";
+		echo "<path d='M $ct->x1, $ct->y1 L $x1, $y1 L $x2, $y2 L $ct->x, $ct->y Z' style='stroke:$color; stroke-width:0; fill:$color'></path>";
+		echo "<path d='M $ct->x1, $ct->y1 L $x1, $y1 M $x1, $y1 A $radio1, $radio1 0 0,1 $qx, $qy A $radio1, $radio1 0 0,1 $x2, $y2 M $x2, $y2 L $ct->x1, $ct->y1 Z' style='stroke:black; stroke-width:2; fill:$color'></path>";
 		$x1 = $x2;
 		$y1 = $y2;
 	}
@@ -138,10 +138,10 @@ function pastel_sub_svg($valores, $ancho, $largo)
 		$qy = $ct->y2 + $radio2 * seno($control);
 		$x2 = $ct->x2 + $radio2 * coseno($angulo);
 		$y2 = $ct->y2 + $radio2 * seno($angulo);
-		//M $x2,$y2 L $ct->x,$ct->y
+		//M $x2, $y2 L $ct->x, $ct->y
 		$color = $lista_color[$i%$m1];
-		echo "<path d='M $ct->x2,$ct->y2 L $x1,$y1 L $x2,$y2 L $ct->x,$ct->y Z' style='stroke:$color; stroke-width:0; fill:$color'></path>";
-		echo "<path d='M $ct->x2,$ct->y2 L $x1,$y1 M $x1,$y1 A $radio2,$radio2 0 0,1 $qx,$qy A $radio2,$radio2 0 0,1 $x2,$y2 M $x2,$y2 L $ct->x2,$ct->y2 Z' style='stroke:black; stroke-width:2; fill:$color'></path>";
+		echo "<path d='M $ct->x2, $ct->y2 L $x1, $y1 L $x2, $y2 L $ct->x, $ct->y Z' style='stroke:$color; stroke-width:0; fill:$color'></path>";
+		echo "<path d='M $ct->x2, $ct->y2 L $x1, $y1 M $x1, $y1 A $radio2, $radio2 0 0,1 $qx, $qy A $radio2, $radio2 0 0,1 $x2, $y2 M $x2, $y2 L $ct->x2, $ct->y2 Z' style='stroke:black; stroke-width:2; fill:$color'></path>";
 		$x1 = $x2;
 		$y1 = $y2;
 	}

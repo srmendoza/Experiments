@@ -89,10 +89,10 @@ class big_calculator
 		$sumandos[0]=$x;
 		for($i=1; $i<$tam2; $i++)
 		{
-			$sumandos[$i]=multiplicacion($sumandos[$i-1],$sumandos[$i-1]);
+			$sumandos[$i]=multiplicacion($sumandos[$i-1], $sumandos[$i-1]);
 			if(1 == $exponent[$])
 			{
-				$result=suma($result,$sumandos[$i]);
+				$result=suma($result, $sumandos[$i]);
 			}
 		}
 		*/

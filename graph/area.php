@@ -19,15 +19,15 @@ function area_svg($valores, $ancho, $largo)
 	yzero_line($y_zero, $ancho);
 	$x1 = 0;//inicial
 	$y1 = $y_zero;//inicial
-	echo "<polygon points='$x1,$y1";
+	echo "<polygon points='$x1, $y1";
 	for($i = 1; $i<=$m; $i++)
 	{
 		$x2 = $ancho_columna+$x1;
 		$y2 = $y_zero - $valores[$i-1]*$altura_columna;
-		echo " $x2,$y2 ";
+		echo " $x2, $y2 ";
 		$x1 = $x2;
 	}
-	echo "$x2,$y1' style='stroke:black; stroke-width:2; fill:black'></polygon>";
+	echo "$x2, $y1' style='stroke:black; stroke-width:2; fill:black'></polygon>";
 	echo "</svg>";
 }
 
@@ -51,15 +51,15 @@ function area_apilada_svg($valores, $ancho, $largo)
 	yzero_line($y_zero, $ancho);
 	$x1 = 0;//inicial
 	$y1 = $y_zero;//inicial
-	echo "<polygon points='$x1,$y1";
+	echo "<polygon points='$x1, $y1";
 	for($i = 1; $i<=$m; $i++)
 	{
 		$x2 = $ancho_columna+$x1;
 		$y2 = $y_zero - $valores[$i-1]*$altura_columna;
-		echo " $x2,$y2 ";
+		echo " $x2, $y2 ";
 		$x1 = $x2;
 	}
-	echo "$x2,$y1' style='stroke:black; stroke-width:2; fill:black'></polygon>";
+	echo "$x2, $y1' style='stroke:black; stroke-width:2; fill:black'></polygon>";
 	echo "</svg>";
 }
 
@@ -83,15 +83,15 @@ function area__svg($valores, $ancho, $largo)
 	yzero_line($y_zero, $ancho);
 	$x1 = 0;//inicial
 	$y1 = $y_zero;//inicial
-	echo "<polygon points='$x1,$y1";
+	echo "<polygon points='$x1, $y1";
 	for($i = 1; $i<=$m; $i++)
 	{
 		$x2 = $ancho_columna+$x1;
 		$y2 = $y_zero - $valores[$i-1]*$altura_columna;
-		echo " $x2,$y2 ";
+		echo " $x2, $y2 ";
 		$x1 = $x2;
 	}
-	echo "$x2,$y1' style='stroke:black; stroke-width:2; fill:black'></polygon>";
+	echo "$x2, $y1' style='stroke:black; stroke-width:2; fill:black'></polygon>";
 	echo "</svg>";
 }
 ?>

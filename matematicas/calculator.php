@@ -103,10 +103,10 @@ function exponente($x, $y)
 	$sumandos[0] = $x;
 	for($i=1; $i<$tam2; $i++)
 	{
-		$sumandos[$i] = multiplicacion($sumandos[$i-1],$sumandos[$i-1]);
+		$sumandos[$i] = multiplicacion($sumandos[$i-1], $sumandos[$i-1]);
 		if($exponent[$i]==1)
 		{
-			$result = suma($result,$sumandos[$i]);
+			$result = suma($result, $sumandos[$i]);
 		}
 	}
 	return $result;
@@ -116,7 +116,7 @@ function modulo($x, $y)
 {
 	$result = [];
 	global $fact;
-	$result = resta($x,division($x,$y));
+	$result = resta($x,division($x, $y));
 	return $result;
 }
 ?>
