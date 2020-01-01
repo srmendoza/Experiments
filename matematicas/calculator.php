@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 $fact = 10**6;
 
 function reordenar($result, $i)

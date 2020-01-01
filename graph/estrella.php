@@ -20,7 +20,7 @@ function estrella_svg($valores, $ancho, $largo)
 	$y1 = $ct->y + $radio_valor*coseno($angulo);
 	for($i=1; $i<=$m; $i++)
 	{
-		$angulo = ($i%$m)*2*$pi/$m;
+		$angulo = ($i%$m)*trig::TAU/$m;
 		$radio_valor = ($valores[$i % $m] / $rango)*$radio;
 		$x2 = $ct->x +  $radio_valor*seno($angulo);
 		$y2 = $ct->y + $radio_valor*coseno($angulo);
@@ -56,7 +56,7 @@ function estrella_marcas_svg($valores, $ancho, $largo)
 	$radio_marca = 5;
 	for($i=1; $i<=$m; $i++)
 	{
-		$angulo = ($i%$m)*2*$pi/$m;
+		$angulo = ($i%$m)*trig::TAU/$m;
 		$radio_valor = ($valores[$i % $m] / $rango)*$radio;
 		$x2 = $ct->x +  $radio_valor*seno($angulo);
 		$y2 = $ct->y + $radio_valor*coseno($angulo);
@@ -98,7 +98,7 @@ function estrella_multi_svg($valores, $ancho, $largo)
 		$color = $lista_color[$j%$m];
 		for($i=1; $i<=$cant; $i++)
 		{
-			$angulo = ($i%$cant)*2*$pi/$m;
+			$angulo = ($i%$cant)*trig::TAU/$m;
 			$radio_valor = ($valores[$i % $cant][$j] / $rango)*$radio;
 			$x2 = $ct->x +  $radio_valor*seno($angulo);
 			$y2 = $ct->y + $radio_valor*coseno($angulo);
@@ -139,7 +139,7 @@ function estrella_marcas_multi_svg($valores, $ancho, $largo)
 		$color = $lista_color[$j%$m];
 		for($i=1; $i<=$cant; $i++)
 		{
-			$angulo = ($i%$cant)*2*$pi/$m;
+			$angulo = ($i%$cant)*trig::TAU/$m;
 			$radio_valor = ($valores[$i % $cant][$j] / $rango)*$radio;
 			$x2 = $ct->x +  $radio_valor*seno($angulo);
 			$y2 = $ct->y + $radio_valor*coseno($angulo);
