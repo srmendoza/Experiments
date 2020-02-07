@@ -1,4 +1,9 @@
 <?php
+
+class polynomial
+{
+
+}
 //coeficiente exponente
 function suma_polinomio($a, $b)
 {

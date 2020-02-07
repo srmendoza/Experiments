@@ -1,4 +1,7 @@
 <?php
+
+class matriz
+{
 function suma_matriz($a, $b)
 {
 	$matr = [][];
@@ -113,47 +116,6 @@ function multimatcuad($mat1, $mat2, $m)
 	return $matrizr;
 }
 
-function multimatcube($mat1, $mat2, $mat3, $m)
-{
-	$matrizr = [][][];
-	for($i = 0; $i < $m; $i++)
-	{
-		for($j = 0; $j < $m; $j++)
-		{
-			for($k = 0; $k < $m; $k++)
-			{
-				for($l = 0; $l < $m; $l++)
-				{
-					$matrizr[$i][$j][$k] = $matrizr[$i][$j][$k] + ($mat1[$i][$j][$l] * $mat2[$i][$l][$k] * $mat3[$l][$j][$k]);
-				}
-			}
-		}
-	}
-	return $matrizr;
-}
-
-function multimathypercube($mat1, $mat2, $mat3, $mat4, $m)
-{
-	$matrizr = [][][][];
-	for($i = 0; $i < $m; $i++)
-	{
-		for($j = 0; $j < $m; $j++)
-		{
-			for($k = 0; $k < $m; $k++)
-			{
-				for($l = 0; $l < $m; $l++)
-				{
-					for($h = 0; $h < $m; $h++)
-					{
-						$matrizr[$i][$j][$k][$l] = $matrizr[$i][$j][$k][$l] + ($mat1[$i][$j][$k][$h] * $mat2[$i][$j][$h][$l] * $mat3[$i][$h][$k][$l] * $mat4[$h][$j][$k][$l]);
-					}
-				}
-			}
-		}
-	}
-	return $matrizr;
-}
-
 function detetminante($mat)
 {
 	$num=0;
@@ -219,5 +181,53 @@ function inversa($mat)
 function gauss_jordan($mat)
 {
 	
+}
+}
+
+class matrizcube
+{
+function multimatcube($mat1, $mat2, $mat3, $m)
+{
+	$matrizr = [][][];
+	for($i = 0; $i < $m; $i++)
+	{
+		for($j = 0; $j < $m; $j++)
+		{
+			for($k = 0; $k < $m; $k++)
+			{
+				for($l = 0; $l < $m; $l++)
+				{
+					$matrizr[$i][$j][$k] = $matrizr[$i][$j][$k] + ($mat1[$i][$j][$l] * $mat2[$i][$l][$k] * $mat3[$l][$j][$k]);
+				}
+			}
+		}
+	}
+	return $matrizr;
+}
+}
+
+class hypermatrix
+{
+function multimathypercube($mat1, $mat2, $mat3, $mat4, $m)
+{
+	$matrizr = [][][][];
+	for($i = 0; $i < $m; $i++)
+	{
+		for($j = 0; $j < $m; $j++)
+		{
+			for($k = 0; $k < $m; $k++)
+			{
+				for($l = 0; $l < $m; $l++)
+				{
+					for($h = 0; $h < $m; $h++)
+					{
+						$matrizr[$i][$j][$k][$l] = $matrizr[$i][$j][$k][$l] + ($mat1[$i][$j][$k][$h] * $mat2[$i][$j][$h][$l] * $mat3[$i][$h][$k][$l] * $mat4[$h][$j][$k][$l]);
+					}
+				}
+			}
+		}
+	}
+	return $matrizr;
+}
 }
 ?>

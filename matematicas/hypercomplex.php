@@ -1,4 +1,9 @@
 <?php
+
+class hypercomplex
+{
+
+}
 function suma_hypercomplex($a, $b)
 {
 	$num = [];

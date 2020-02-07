@@ -1,4 +1,4 @@
-function exponent(x)//función de taylor del exponente
+function exponent(x)//funciÃ³n de taylor del exponente
 {
 	var num = 1;
 	var n = 1;

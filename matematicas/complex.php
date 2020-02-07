@@ -1,4 +1,9 @@
 <?php
+
+class complex
+{
+
+}
 function suma_complex($a, $b)
 {
 	$num = [];

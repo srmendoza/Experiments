@@ -1,4 +1,4 @@
-function sumando(x)//sumas sucesivas de n鷐eros
+function sumando(x)//sumas sucesivas de n煤meros
 {
 	var num = 1;
 	if(x > 1)
@@ -8,7 +8,7 @@ function sumando(x)//sumas sucesivas de n鷐eros
 	return num;
 }
 
-function fibbonacci(n)//sucesi髇 de fibbonacci usando un ciclo for
+function fibbonacci(n)//sucesi贸n de fibbonacci usando un ciclo for
 {
 	var num = [];
 	num[0] = 0;
@@ -48,7 +48,7 @@ function expaft(x)
 	return num;
 }
 
-function geoari(x)//divide una progresi髇 geom閠rica entre una aritm閠ica
+function geoari(x)//divide una progresi贸n geom茅trica entre una aritm茅tica
 {
 	var num = 0;
 	if(x>0)
@@ -73,7 +73,7 @@ function dbfactor(x)
 	return num;
 }
 
-function fibbonaccimat(x)//realiza la sucesi髇 de fibbonacci con matrices
+function fibbonaccimat(x)//realiza la sucesi贸n de fibbonacci con matrices
 {
 	var i = x - 1;
 	var a = 1;
@@ -102,7 +102,7 @@ function fibbonaccimat(x)//realiza la sucesi髇 de fibbonacci con matrices
 	return (a + b);
 }
 
-function lucas(x)//realiza la sucesi髇 de lucas como diferencia de la sucesi髇 de fibbonacci
+function lucas(x)//realiza la sucesi贸n de lucas como diferencia de la sucesi贸n de fibbonacci
 {
 	var num = 2;
 	if(x>1)
@@ -139,7 +139,7 @@ function catalan(x)
 	return num;
 }
 
-function primorial(x)//multiplicaci髇 sucesiva de n鷐eros primos
+function primorial(x)//multiplicaci贸n sucesiva de n煤meros primos
 {
 	var num = 2;
 	if(x>0)
@@ -223,7 +223,7 @@ function despues(x)//revisar
 	return num;
 }
 
-function bell(x)//obtiene los n鷐eros de bell
+function bell(x)//obtiene los n煤meros de bell
 {
 	var num = [];
 	num[0] = 1;
@@ -251,7 +251,7 @@ function kynea(x)
 	return num;
 }
 
-function bernoulli(x, n)//obtiene los n鷐eros de bernoulli
+function bernoulli(x, n)//obtiene los n煤meros de bernoulli
 {
 	var num = 0;
 	if(x>0)
@@ -264,7 +264,7 @@ function bernoulli(x, n)//obtiene los n鷐eros de bernoulli
 	return num;
 }
 
-function comb(x, n)//realiza la combinaci髇 de de x en n
+function comb(x, n)//realiza la combinaci贸n de de x en n
 {
 	var num = 1;
 	if(n == x || n == 0)
@@ -404,7 +404,7 @@ function xzeta(x, n)
 	return num;
 }
 
-function mcm(x, n)//m韓imo com鷑 m鷏tiplo
+function mcm(x, n)//m铆nimo com煤n m煤ltiplo
 {
 	return (x * n) / MCD(x, n);
 }
@@ -497,7 +497,7 @@ function euler(x, y)//numeros de euler
 	return num;
 }
 
-function stirling(x, y)//n鷐eros de stirling
+function stirling(x, y)//n煤meros de stirling
 {
 	var num = 0;
 	for(var i=1; i<=y; i++)

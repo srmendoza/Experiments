@@ -1,5 +1,5 @@
 <?php
-function exponent($x)//función de taylor del exponente
+function exponent($x)//funciÃ³n de taylor del exponente
 {
 	$num = 1;
 	$n = 1;
@@ -11,7 +11,7 @@ function exponent($x)//función de taylor del exponente
 	return $num;
 }
 
-function seno($x)
+function sin($x)
 {
 	$num = 0;
 	$n = 1;
@@ -22,7 +22,7 @@ function seno($x)
 	return $num;
 }
 
-function coseno($x)
+function cos($x)
 {
 	$num = 0;
 	$n = 1;
