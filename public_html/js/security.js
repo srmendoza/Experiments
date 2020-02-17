@@ -6,7 +6,7 @@ function salt(size)
 	revolver($rand);
 	var bit=[0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x00];//0x80);
 	var value=0x00;
-	for(var i=0; i<num/4; i++)
+	for(let i=0; i<num/4; i++)
 	{
 		var aux=rand[i]%2;
 		var aux2=i%8;
@@ -30,7 +30,7 @@ function rango(min, max, step)
 {
 	var cont=0;
 	var valor=[];
-	for(var i=min; i<=max; i=i+step)
+	for(let i=min; i<=max; i=i+step)
 	{
 		valor[cont]=i;
 		cont++;
@@ -51,7 +51,7 @@ function aleatorio(max)
 	var rand2=rango(1,max,1);
 	revolver(rand2);
 	var rand3=rango(0,9,1);
-	for(var j=0; j<rand2[0]; j++)
+	for(let j=0; j<rand2[0]; j++)
 	{
 		revolver(rand3);
 		num=(10*num)+rand3[0];

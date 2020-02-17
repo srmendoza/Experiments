@@ -18,7 +18,7 @@ function suma(x, y)
 	{
 		tam = tamx;
 	}
-	for(var i=0; i<tam; i++)
+	for(let i=0; i<tam; i++)
 	{
 		result[i] = result[i]+x[i]+y[i];
 		if(result[i]>fact)
@@ -40,7 +40,7 @@ function resta(x, y)
 	{
 		tam = tamx;
 	}
-	for(var i=0; i< tam; i++ )
+	for(let i=0; i< tam; i++ )
 	{
 		result[i] = result[i]+x[i]-y[i];
 		if(result[i]>fact)
@@ -57,9 +57,9 @@ function multiplicacion(x, y)
 	var tamx = x.length;
 	var tamy = y.length;
 	//multiplicacion de polinomios
-	for(var i=0; i< tamx; i++ )
+	for(let i=0; i< tamx; i++ )
 	{
-		for(var j=0; j< tamy; j++ )
+		for(let j=0; j< tamy; j++ )
 		{
 			result[i] = result[i]+x[i]*y[j];
 			if(result[i]>fact)
@@ -86,7 +86,7 @@ function exponente(x, y)
 	var tam = x.length;
 	//volver a y binario y hacer los cuadrados unicamente
 	//usar la multiplicacion cada vez
-	for(var i=0; y==0 || y==1; i++)
+	for(let i=0; y==0 || y==1; i++)
 	{
 		exponent[i] = (int)(y/2);
 		exponent[i+1] = y%2;

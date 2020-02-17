@@ -4,6 +4,14 @@ declare(strict_types=1);
 class big_calculator
 {
 	const FACT = 10**6;
+
+private function reordenar($result, $i)
+{
+	global $fact;
+	$result[$i+1] = $result[$i+1] + (int)($result[$i]/$fact);
+	$result[$i] = $result[$i] + ($result[$i]%$fact);
+	return $result;
+}
 	
 	public function suma(array $x, array $y)
 	{

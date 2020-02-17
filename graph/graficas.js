@@ -13,7 +13,7 @@ function zero(max, min, rango)
 function minimo(valores, cant)
 {
 	var min = 0;
-	for(var i = 0; i<cant; i++)
+	for(let i = 0; i<cant; i++)
 	{
 		if(min > valores[i])
 		{
@@ -26,7 +26,7 @@ function minimo(valores, cant)
 function maximo(valores, cant)
 {
 	var max = 0;
-	for(var i = 0; i<cant; i++)
+	for(let i = 0; i<cant; i++)
 	{
 		if(max < valores[i])
 		{
@@ -39,9 +39,9 @@ function maximo(valores, cant)
 function maximo_multi(valores, mx, my)
 {
 	var max = 0;
-	for(var i = 0; i<mx; i++)
+	for(let i = 0; i<mx; i++)
 	{
-		for(var j=0; j<my; j++)
+		for(let j=0; j<my; j++)
 		{
 			if(max < valores[i][j])
 			{
@@ -55,10 +55,10 @@ function maximo_multi(valores, mx, my)
 function minimo_multi(valores, mx, my)
 {
 	var min = 0;
-	for(var i = 0; i<mx; i++)
+	for(let i = 0; i<mx; i++)
 	{
 		var m = valores[i].size;
-		for(var j=0; j<my; j++)
+		for(let j=0; j<my; j++)
 		{
 			if(min < valores[i][j])
 			{
@@ -72,9 +72,9 @@ function minimo_multi(valores, mx, my)
 function maximo_agrupada(valores)
 {
 	var max = 0;
-	for(var i = 0; i<cant; i++)
+	for(let i = 0; i<cant; i++)
 	{
-		for(var j=0; j<my; j++)
+		for(let j=0; j<my; j++)
 		{
 			if(max < valores[i][j])
 			{
@@ -88,10 +88,10 @@ function maximo_agrupada(valores)
 function minimo_agrupada(valores)
 {
 	var min = 0;
-	for(var i = 0; i<cant; i++)
+	for(let i = 0; i<cant; i++)
 	{
 		var m = valores[i].size;
-		for(var j=0; j<my; j++)
+		for(let j=0; j<my; j++)
 		{
 			if(min < valores[i][j])
 			{
@@ -105,9 +105,9 @@ function minimo_agrupada(valores)
 function maximo_apilada(valores)
 {
 	var max = 0;
-	for(var i = 0; i<cant; i++)
+	for(let i = 0; i<cant; i++)
 	{
-		for(var j=0; j<my; j++)
+		for(let j=0; j<my; j++)
 		{
 			if(max < valores[i][j])
 			{
@@ -121,9 +121,9 @@ function maximo_apilada(valores)
 function minimo_apilada(valores)
 {
 	var min = 0;
-	for(var i = 0; i<cant; i++)
+	for(let i = 0; i<cant; i++)
 	{
-		for(var j=0; j<my; j++)
+		for(let j=0; j<my; j++)
 		{
 			if(min < valores[i][j])
 			{
@@ -137,9 +137,9 @@ function minimo_apilada(valores)
 function porcentaje_apilada(valores, m)
 {
 	var valores = [];
-	for(var i = 0; i<cant; i++)
+	for(let i = 0; i<cant; i++)
 	{
-		for(var j=0; j<my; j++)
+		for(let j=0; j<my; j++)
 		{
 			
 		}
@@ -168,7 +168,7 @@ function marco(ancho, largo)
 function leyenda(valores, ancho, largo)
 {
 	var m = valores.size;
-	for(var i=0; i<m; i++)
+	for(let i=0; i<m; i++)
 	{
 		
 	}
@@ -179,7 +179,7 @@ function colores(cantidad)
 	var colores = [];
 	var limit = 255;
 	step = (int)(limit / cantidad);
-	for(var i=0; i<cantidad; i++)
+	for(let i=0; i<cantidad; i++)
 	{
 		var red = step * i;
 		var green = step * i;
@@ -202,7 +202,7 @@ function verticales_canvas(valores, ancho, largo)
 	echo "ctx.fillStyle = '#FF0000'; ";
 	var x1 = 0;
 	var y1 = largo - 0;
-	for(var i=1; i<=m; i++)
+	for(let i=1; i<=m; i++)
 	{
 		var x2 = $ancho_columna + x1;
 		var y2 = $y1 - ($valores[$i-1]*$ancho_columna);
@@ -227,7 +227,7 @@ function verticales_agrupada_canvas(valores, ancho, largo)
 	echo "ctx.fillStyle = '#FF0000';";
 	var x1 = 0;
 	var y1 = 0;
-	for(var i=0; i<m; i++)
+	for(let i=0; i<m; i++)
 	{
 		$x2;
 		$y2;
@@ -247,7 +247,7 @@ function verticales_apliada_canvas(valores, ancho, largo)
 	echo "ctx.fillStyle = '#FF0000';";
 	var x1 = 0;
 	var y1 = 0;
-	for(var i=0; i<m; i++)
+	for(let i=0; i<m; i++)
 	{
 		$x2;
 		$y2;
@@ -265,7 +265,7 @@ function pastel_canvas(valores, ancho, largo)
 	echo "ctx.fillStyle = '#FF0000';";
 	var x1 = 0;
 	var y1 = 0;
-	for(var i=0; i<m; i++)
+	for(let i=0; i<m; i++)
 	{
 		$x2;
 		$y2;
@@ -285,7 +285,7 @@ function puntos_canvas(valores, ancho, largo)
 	echo "ctx.fillStyle = '#FF0000';";
 	var x1 = 0;
 	var y1 = 0;
-	for(var i=0; i<m; i++)
+	for(let i=0; i<m; i++)
 	{
 		$x2;
 		$y2;
@@ -305,7 +305,7 @@ function puntos_multi_canvas(valores, ancho, largo)
 	echo "ctx.fillStyle = '#FF0000';";
 	var x1 = 0;
 	var y1 = 0;
-	for(var i=0; i<m; i++)
+	for(let i=0; i<m; i++)
 	{
 		$x2;
 		$y2;
@@ -325,7 +325,7 @@ function lineas_canvas(valores, ancho, largo)
 	echo "ctx.fillStyle = '#FF0000';";
 	var x1 = 0;
 	var y1 = 0;
-	for(var i=0; i<m; i++)
+	for(let i=0; i<m; i++)
 	{
 		$x2;
 		$y2;
@@ -347,7 +347,7 @@ function lineas_marcas_canvas(valores, ancho, largo)
 	echo "ctx.fillStyle = '#FF0000';";
 	var x1 = 0;
 	var y1 = 0;
-	for(var i=0; i<m; i++)
+	for(let i=0; i<m; i++)
 	{
 		$x2;
 		$y2;
@@ -369,7 +369,7 @@ function lineas_multi_canvas(valores, ancho, largo)
 	echo "ctx.fillStyle = '#FF0000';";
 	var x1 = 0;
 	var y1 = 0;
-	for(var i=0; i<m; i++)
+	for(let i=0; i<m; i++)
 	{
 		$x2;
 		$y2;
@@ -393,7 +393,7 @@ function lineas_marcas_multi_canvas(valores, ancho, largo)
 	echo "ctx.fillStyle = '#FF0000';";
 	var x1 = 0;
 	var y1 = 0;
-	for(var i=0; i<m; i++)
+	for(let i=0; i<m; i++)
 	{
 		$x2;
 		$y2;
@@ -423,7 +423,7 @@ function horizontales_canvas(valores, ancho, largo)
 	echo "ctx.fillStyle = '#FF0000'; ";
 	var x1 = 0;
 	var y1 = 0;
-	for(var i=1; i<=m; i++)
+	for(let i=1; i<=m; i++)
 	{
 		$x2 = ($valores[$i-1]*$altura_columna) + x1;
 		$y2 = $ancho_columna + var y1 = 0;
@@ -446,7 +446,7 @@ function horizontales_apilada_canvas(valores, ancho, largo)
 	echo "ctx.fillStyle = '#FF0000';";
 	var x1 = 0;
 	var y1 = 0;
-	for(var i=0; i<m; i++)
+	for(let i=0; i<m; i++)
 	{
 		$x2;
 		$y2;
@@ -469,7 +469,7 @@ function horizontales_agrupada_canvas(valores, ancho, largo)
 	echo "ctx.fillStyle = '#FF0000';";
 	var x1 = 0;
 	var y1 = 0;
-	for(var i=0; i<m; i++)
+	for(let i=0; i<m; i++)
 	{
 		$x2;
 		$y2;
@@ -487,7 +487,7 @@ function estrella_canvas(valores, ancho, largo)
 	echo "ctx.fillStyle = '#FF0000';";
 	var x1 = 0;
 	var y1 = 0;
-	for(var i=0; i<m; i++)
+	for(let i=0; i<m; i++)
 	{
 		$x2;
 		$y2;
@@ -506,7 +506,7 @@ function estrella_puntos_canvas(valores, ancho, largo)
 	echo "ctx.fillStyle = '#FF0000';";
 	var x1 = 0;
 	var y1 = 0;
-	for(var i=0; i<m; i++)
+	for(let i=0; i<m; i++)
 	{
 		$x2;
 		$y2;
@@ -528,7 +528,7 @@ function area_canvas(valores, ancho, largo)
 	echo "ctx.fillStyle = '#FF0000';";
 	var x1 = 0;
 	var y1 = 0;
-	for(var i=0; i<m; i++)
+	for(let i=0; i<m; i++)
 	{
 		$x2;
 		$y2;

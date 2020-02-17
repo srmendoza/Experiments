@@ -2,7 +2,7 @@ function exponent(x)//función de taylor del exponente
 {
 	var num = 1;
 	var n = 1;
-	for(var i = 1; i <= 10; i++)
+	for(let i = 1; i <= 10; i++)
 	{
 		n = n*i;
 		num = num + x**i / n;
@@ -14,7 +14,7 @@ function seno(x)
 {
 	var num = 0;
 	var n = 1;
-	for(var i=0; i<10; i++)
+	for(let i=0; i<10; i++)
 	{
 		num = num + (x**(4*i + 1))/factorial(4*i + 1) - (x**(4*i + 3))/factorial(4*i + 3);
 	}
@@ -25,7 +25,7 @@ function coseno(x)
 {
 	var num = 0;
 	var n = 1;
-	for(var i=0; i<10; i++)
+	for(let i=0; i<10; i++)
 	{
 		num = num + (x**(4*i + 0))/factorial(4*i + 0) - (x**(4*i + 2))/factorial(4*i + 2);
 	}
@@ -38,7 +38,7 @@ function logaritmo(x)
 	if(x >= 2)
 	{
 		var num2 = ((x - 1) / (x + 1));
-		for(var i = 0; i <= 100; i++)
+		for(let i = 0; i <= 100; i++)
 		{
 			var k = 2 * i + 1;
 			num = num + ((num2**k) / k);
@@ -53,7 +53,7 @@ function factorial(x)//realiza el factorial usando un ciclo for
 	var num = 1;
 	if(x>0)
 	{
-		for(var i=1; i<=x; i++)
+		for(let i=1; i<=x; i++)
 		{
 			num = num*i;
 		}

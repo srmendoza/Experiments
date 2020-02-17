@@ -19,7 +19,7 @@ function primos(x, y)
 	do
 	{
 			var band=true;
-			for(var j=0; j<tam && band && (i>=(primos[j]*primos[j])); j++)
+			for(let j=0; j<tam && band && (i>=(primos[j]*primos[j])); j++)
 			{
 				if(i%primos[j]==0)
 				{
@@ -38,11 +38,11 @@ function primos(x, y)
 	i=tam;
 	do
 	{
-		for(var j=0; j<size && i<=x; j++)
+		for(let j=0; j<size && i<=x; j++)
 		{
 			var band=true;
 			var num=valor*k+coprimo[j];
-			for(var l=0; l<i && band && (num>=(primos[l]*primos[l])); l++)
+			for(let l=0; l<i && band && (num>=(primos[l]*primos[l])); l++)
 			{
 				if(num%primos[l]==0)
 				{

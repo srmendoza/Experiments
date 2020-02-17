@@ -14,7 +14,7 @@ function fibbonacci(n)//sucesión de fibbonacci usando un ciclo for
 	num[0] = 0;
 	var x = 0;
 	var y = 1;
-	for(var i=0; i<n; i++)
+	for(let i=0; i<n; i++)
 	{
 		$num[i+1] = x + y;
 		x = y;
@@ -121,7 +121,7 @@ function altfactorial(x)//va sumando factoriales positivos y negativos
 	var num = 1;
 	if(x>0)
 	{
-		for(var i=1; i<x; i++)
+		for(let i=1; i<x; i++)
 		{
 			num = num + ((-1)**(x-i)) * factorial(i);
 		}
@@ -144,7 +144,7 @@ function primorial(x)//multiplicación sucesiva de números primos
 	var num = 2;
 	if(x>0)
 	{
-		for(var i=1; i<x; i++)
+		for(let i=1; i<x; i++)
 		{
 			num = num * prime(i);
 		}
@@ -179,7 +179,7 @@ function rares(x)//revisar
 	var num = 1;
 	if(x>0)
 	{
-		for(var i=1; i<x; i++)
+		for(let i=1; i<x; i++)
 		{
 			num = num + comb(2*i,i);
 		}
@@ -202,7 +202,7 @@ function antes(x)//revisar
 	var num = 0;
 	if(x>0)
 	{
-		for(var i=1; i<x; i++)
+		for(let i=1; i<x; i++)
 		{
 			num = num + i/(i+1);
 		}
@@ -215,7 +215,7 @@ function despues(x)//revisar
 	var num = 0;
 	if(x>0)
 	{
-		for(var i=1; i<x; i++)
+		for(let i=1; i<x; i++)
 		{
 			num = num + (i+1)/i;
 		}
@@ -230,9 +230,9 @@ function bell(x)//obtiene los números de bell
 	if(x>0)
 	{
 		num[1] = 1;
-		for(var i=2; i<x+1; i++)
+		for(let i=2; i<x+1; i++)
 		{
-			for(var j=0; j<i; j++)
+			for(let j=0; j<i; j++)
 			{
 				num[i] = num[i] + binomial(i - 1, j) * num[j];
 			}
@@ -256,7 +256,7 @@ function bernoulli(x, n)//obtiene los números de bernoulli
 	var num = 0;
 	if(x>0)
 	{
-		for(var i=0; i<=x; i++)
+		for(let i=0; i<=x; i++)
 		{
 			num = num + ((-1)**i) * (Worpitzky(x, i) / (i + 1));
 		}
@@ -329,7 +329,7 @@ function perm(x, n)//realiza las permutaciones de x en n
 		}
 		else
 		{
-			for(var i = a; i <= x; i++)
+			for(let i = a; i <= x; i++)
 			{
 				num = num * i;
 			}
@@ -355,7 +355,7 @@ function suma_potencia(x, n)//suma consecutiva de potencias
 	num[0] = 1;
 	if(x>0)
 	{
-		for(var i=1; i<(x+1); i++)
+		for(let i=1; i<(x+1); i++)
 		{
 			num[i] = num[i-1] + i**n;
 		}
@@ -369,7 +369,7 @@ function creci(x, n)//secuencia de diferencia de potencias
 	$num[0] = 1;
 	if($x>0)
 	{
-		for(var i=1; i<(x+1); i++)
+		for(let i=1; i<(x+1); i++)
 		{
 			num[i] = num[i-1] + (i**n) - ((i-1)**n);
 		}
@@ -382,7 +382,7 @@ function polilog(x, n)//realiza el polilogaritmo de x base n
 	var num = 0;
 	if(x>0)
 	{
-		for(var i=1; i<20; i++)
+		for(let i=1; i<20; i++)
 		{
 			num = num + (x**i)/(i**n);
 		}
@@ -395,7 +395,7 @@ function xzeta(x, n)
 	var num = 0;
 	if(x>0)
 	{
-		for(var i=1; i<20; i++)
+		for(let i=1; i<20; i++)
 		{
 			var k = 2 * i + 1;
 			num = num + (x**k)/(k**n);
@@ -444,7 +444,7 @@ function exprime(x, n)//suma de potencia de primos
 	var num = 0;
 	if(x>1)
 	{
-		for(var i=0; i<x; i++)
+		for(let i=0; i<x; i++)
 		{
 			num = num + (prime(i)**n);
 		}
@@ -457,7 +457,7 @@ function invpolilog(x, y)//inverso del polilogaritmo
 	var num = 0;
 	if(x>0 && y>0)
 	{
-		for(var i=1; i<20; i++)
+		for(let i=1; i<20; i++)
 		{
 			num = num + (i**x) / (y**i);
 		}
@@ -490,7 +490,7 @@ function multy(x, y)//revisar
 function euler(x, y)//numeros de euler
 {
 	var num = 0;
-	for(var i=0; i<=y; i++)
+	for(let i=0; i<=y; i++)
 	{
 		num = num + (((-1)**i) * binomial(x + 1, i) * ((y + 1 - i)**x));
 	}
@@ -500,7 +500,7 @@ function euler(x, y)//numeros de euler
 function stirling(x, y)//números de stirling
 {
 	var num = 0;
-	for(var i=1; i<=y; i++)
+	for(let i=1; i<=y; i++)
 	{
 		$num = num + (-1)**(y - i) * binomial(y, i) * i**x;
 	}
@@ -511,7 +511,7 @@ function stirling(x, y)//números de stirling
 function expcoef(x, n)//revisar
 {
 	var num = 0;
-	for(var i = 1; i <= n; i++)
+	for(let i = 1; i <= n; i++)
 	{
 		num = num + i * (x**(i - 1)) * ((-1)**(n - i));
 	}
@@ -521,7 +521,7 @@ function expcoef(x, n)//revisar
 function risingfact(x, n)//revisar
 {
 	var num = 1;
-	for(var i=x; i<=x+n-1; i++)
+	for(let i=x; i<=x+n-1; i++)
 	{
 		num = num*i;
 	}
@@ -531,7 +531,7 @@ function risingfact(x, n)//revisar
 function qexponent(x, n)
 {
 	var num = 0;
-	for(var i = 1; i <= 20; i++)
+	for(let i = 1; i <= 20; i++)
 	{
 		num = num + (x**i)/qfactorial(n, i);
 	}
@@ -543,7 +543,7 @@ function qanalog(x, n)
 	var num = 0;
 	if(n > 0)
 	{
-		for(var i = 0; i < n; i++)
+		for(let i = 0; i < n; i++)
 		{
 			num = num + (x**i);
 		}
@@ -556,7 +556,7 @@ function qfactorial(x, n)
 	var num;
 	if(n > 1 && x > 0)
 	{
-		for(var i = 2; i <= n; i++)
+		for(let i = 2; i <= n; i++)
 		{
 			num = num * qanalog(x, i);
 		}
@@ -571,13 +571,13 @@ function nfibonacci(x, t)
 		var num = [];
 		var m = x + t;
 		num[0] = 0;
-		for(var i = 1; i <= t; i++)
+		for(let i = 1; i <= t; i++)
 		{
 			num[i] = 1;
 		}
 		for(i = t + 1; i < m; i++)
 		{
-			for(var j = 1; j <= t; j++)
+			for(let j = 1; j <= t; j++)
 			{
 				num[i] = num[i] + num[i - j];
 			}
@@ -600,7 +600,7 @@ function touchard(x, y)
 	}
 	else
 	{
-		for(var i = 1; i <= y; i++)
+		for(let i = 1; i <= y; i++)
 		{
 			num = num + stirling(y, i) *(x**i);
 		}
@@ -623,7 +623,7 @@ function self(x, y)//revisar
 		}
 		if(x > 0)
 		{
-			for(var i = 1; i < (x+1); i++)
+			for(let i = 1; i < (x+1); i++)
 			{
 				num[i] = (y - 2) * (y**(i - 1)) + num[i - 1] + (y - 2);
 			}
@@ -644,7 +644,7 @@ function jugexp(x, n)//revisar
 	num[0] = n;
 	if(x > 1)
 	{
-		for(var i = 1; i < x; i++)
+		for(let i = 1; i < x; i++)
 		{
 			if((i % 2) == 0)
 			{
@@ -665,7 +665,7 @@ function worpitzky(x, y)
 	var num = 0;
 	if(y > 0)
 	{
-		for(var i = 0; i <= y; i++)
+		for(let i = 0; i <= y; i++)
 		{
 			num = num + ((-1)**(i + y)) * ((i + 1)**x) * comb(y, i);
 		}
@@ -681,7 +681,7 @@ function sumprod(x, n)//revisar
 		var nums = cuadrado(x, q, n);
 		var num2 = 0;
 		var num3 = 1;
-		for(var i = 0; i < q; i++)
+		for(let i = 0; i < q; i++)
 		{
 			num2 = num2 + nums[i];
 			num3 = num3 * nums[i];
@@ -699,7 +699,7 @@ function numexp(x, n)//revisar
 	{
 		var nums = cuadrado(x, q, n);
 		var num = 0;
-		for(var i = 0; i < q; i++)
+		for(let i = 0; i < q; i++)
 		{
 			num = num + (nums[i]**2);
 		}
@@ -739,7 +739,7 @@ function expmod(x, t, s)
 	var r = 0;
 	var num = 1;
 	var expo = cuadrado(t, r, 2);
-	for(var j = 0; j < r; j++)
+	for(let j = 0; j < r; j++)
 	{
 		num = ((num % s) * (num % s)) % s;
 		if(expo[j] == 1)
@@ -755,7 +755,7 @@ function qpochhammer(x, y, z)
 	var num = 1;
 	if(x > 0)
 	{
-		for(var i = 0; i <= z - 1; i++)
+		for(let i = 0; i <= z - 1; i++)
 		{
 			num = num * (1 - x * (y**i));
 		}
@@ -766,7 +766,7 @@ function qpochhammer(x, y, z)
 function kpochhammer(x, y, z)
 {
 	var num = 1;
-	for(var i = 0; i <= (y - 1); i++)
+	for(let i = 0; i <= (y - 1); i++)
 	{
 		num = num * (x + (i * z));
 	}
@@ -776,7 +776,7 @@ function kpochhammer(x, y, z)
 function lerch(x, y, z)
 {
 	var num = 0;
-	for(var i = 0; i <= 20; i++)
+	for(let i = 0; i <= 20; i++)
 	{
 		num = num + (x**i) / ((i + z)**y);
 	}
@@ -787,7 +787,7 @@ function qbinomial(x, n)
 {
 	var num = 1;
 	var a = y - z + 1;
-	for(var i = a; i <= y; i++)
+	for(let i = a; i <= y; i++)
 	{
 		num = num * qanalog(x, i);
 	}
@@ -799,7 +799,7 @@ function regurbeta(x, y, z)
 {
 	var num = 0;
 	var a = y + z - 1;
-	for(var i = y; i <= a; i++)
+	for(let i = y; i <= a; i++)
 	{
 		num = num + (comb(a, i) * (x**i) * ((1 - x)**(a - i)));
 	}
@@ -811,7 +811,7 @@ function sergesecuen(x, t, s, r)
 	var num = [];
 	var t1 = t.length;
 	var num1 = x + t1;
-	for(var i = 0; i < t1; i++)
+	for(let i = 0; i < t1; i++)
 	{
 		num[i] = t[i];
 	}
@@ -822,7 +822,7 @@ function sergesecuen(x, t, s, r)
 		{
 			for(i = t1; i < num1; i++)
 			{
-				for(var j = 1; j <= s1; j++)
+				for(let j = 1; j <= s1; j++)
 				{
 					num[i] = num[i] + (s[j - 1] * num[i - j]);
 				}
@@ -837,7 +837,7 @@ function sergesecuen(x, t, s, r)
 function dichirel(x)
 {
 	var num = 0;
-	for(var i = 1; i <= 50; i++)
+	for(let i = 1; i <= 50; i++)
 	{
 		num = num + 1 / (i**x);
 	}
@@ -847,9 +847,9 @@ function dichirel(x)
 function matrizs(x)//revisar
 {
 	var mat = [][];
-	for(var i = 0; i < x; i++)
+	for(let i = 0; i < x; i++)
 	{
-		for(var j = 0; j < x; j++)
+		for(let j = 0; j < x; j++)
 		{
 			mat[i][j] = comb(i + j - 2, i - 1);
 		}
@@ -880,9 +880,9 @@ function qgeneralize(x, y, z)
 {
 	var num = 1;
 	var y1 = y.length;
-	for(var i = 1; i <= y1; i++)
+	for(let i = 1; i <= y1; i++)
 	{
-		for(var j = 1; j <= y[i]; j++)
+		for(let j = 1; j <= y[i]; j++)
 		{
 			num = num * (x - ((i - 1) / z) + j - 1);
 		}
@@ -894,10 +894,10 @@ function multinomial(x)
 {
 	var num = 1;
 	var n = x.length;
-	for(var i=0; i < n; i++)
+	for(let i=0; i < n; i++)
 	{
 		var num2 = 0;
-		for(var j = 0; j < i; j++)
+		for(let j = 0; j < i; j++)
 		{
 			num2 = num2 + x[j];
 		}
@@ -909,7 +909,7 @@ function multinomial(x)
 function permlist(x, s)//revisar permuta una lista
 {
 	var n = s.length;
-	for(var j = 1; j < n; j++)
+	for(let j = 1; j < n; j++)
 	{
 		x = x / j;
 		var camb = s[(x % j) + 1];

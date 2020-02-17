@@ -7,7 +7,7 @@ function zero($max, $min)
 function minimo(valores, cant)
 {
 	var min = 0;
-	for(var i = 0; $i<$cant; $i++)
+	for(let i = 0; $i<$cant; $i++)
 	{
 		if($min > $valores[$i])
 		{
@@ -20,7 +20,7 @@ function minimo(valores, cant)
 function maximo(valores, cant)
 {
 	var max = 0;
-	for(var i = 0; $i<$cant; $i++)
+	for(let i = 0; $i<$cant; $i++)
 	{
 		if($max < $valores[$i])
 		{
@@ -33,7 +33,7 @@ function maximo(valores, cant)
 function maximo_multi(valores, cant)
 {
 	var max = 0;
-	for(var i = 0; $i<$cant; $i++)
+	for(let i = 0; $i<$cant; $i++)
 	{
 		for($j=0; $j<$m; $j++)
 		{
@@ -49,7 +49,7 @@ function maximo_multi(valores, cant)
 function minimo_multi(valores, cant)
 {
 	var min = 0;
-	for(var i = 0; $i<$cant; $i++)
+	for(let i = 0; $i<$cant; $i++)
 	{
 		for($j=0; $j<$m; $j++)
 		{
@@ -65,7 +65,7 @@ function minimo_multi(valores, cant)
 function maximo_agrupada(valores)
 {
 	var max = 0;
-	for(var i = 0; $i<$cant; $i++)
+	for(let i = 0; $i<$cant; $i++)
 	{
 		for($j=0; $j<$m; $j++)
 		{
@@ -81,7 +81,7 @@ function maximo_agrupada(valores)
 function minimo_agrupada(valores)
 {
 	var min = 0;
-	for(var i = 0; $i<$cant; $i++)
+	for(let i = 0; $i<$cant; $i++)
 	{
 		for($j=0; $j<$m; $j++)
 		{
@@ -97,7 +97,7 @@ function minimo_agrupada(valores)
 function maximo_apilada(valores)
 {
 	var max = 0;
-	for(var i = 0; $i<$cant; $i++)
+	for(let i = 0; $i<$cant; $i++)
 	{
 		for($j=0; $j<$m; $j++)
 		{
@@ -113,7 +113,7 @@ function maximo_apilada(valores)
 function minimo_apilada(valores)
 {
 	var min = 0;
-	for(var i = 0; $i<$cant; $i++)
+	for(let i = 0; $i<$cant; $i++)
 	{
 		for($j=0; $j<$m; $j++)
 		{
@@ -129,7 +129,7 @@ function minimo_apilada(valores)
 function porcentaje_apilada($valores, $m)
 {
 	$valores = [];
-	for(var i = 0; $i<$cant; $i++)
+	for(let i = 0; $i<$cant; $i++)
 	{
 		for($j=0; $j<$m; $j++)
 		{
@@ -189,7 +189,7 @@ function verticales_svg($valores, $ancho, $largo)
 	var x1 = 0;//inicial
 	var y1 = largo - 0;//inicial
 	$lista_color = ['yellow', 'blue'];//colores($m);
-	for(var i = 1; $i<=$m; $i++)
+	for(let i = 1; $i<=$m; $i++)
 	{
 		$x2 = $ancho_columna+$x1;
 		$y2 = $y1 - (($valores[$i-1])*$altura_columna);
@@ -213,7 +213,7 @@ function verticales_agrupada_svg($valores, $ancho, $largo)
 	echo "<svg width='$ancho' height='$largo'>";
 	var x1 = 0;//inicial
 	var y1 = largo - 0;//inicial
-	for(var i = 1; $i<=$m; $i++)
+	for(let i = 1; $i<=$m; $i++)
 	{
 		$x2 = $ancho_columna+$x1;
 		$y2 = $y1 - (($valores[$i-1])*$altura_columna);
@@ -236,7 +236,7 @@ function verticales_apilada_svg($valores, $ancho, $largo)
 	echo "<svg width='$ancho' height='$largo'>";
 	var x1 = 0;//inicial
 	var y1 = largo - 0;//inicial
-	for(var i = 1; $i<=$m; $i++)
+	for(let i = 1; $i<=$m; $i++)
 	{
 		$x2 = $ancho_columna+$x1;
 		$y2 = $y1 - (($valores[$i-1])*$altura_columna);
@@ -332,7 +332,7 @@ function puntos_svg($valores, $ancho, $largo)
 	var x1 = 0;//inicial
 	var y1 = largo - 0;//inicial
 	$radio = 5;
-	for(var i = 1; $i<=$m; $i++)
+	for(let i = 1; $i<=$m; $i++)
 	{
 		$x2 = $ancho_columna+$x1;
 		$y2 = $y1 - (($valores[$i-1])*$altura_columna);
@@ -351,7 +351,7 @@ function puntos_multi_svg($valores, $ancho, $largo)
 	var ancho_columna = (ancho * 9/10) / (m);
 	// buscar la escala
 	var max = 0;
-	for(var i = 0; $i<$m; $i++)
+	for(let i = 0; $i<$m; $i++)
 	{
 		if($max < $valores[$i])
 		{
@@ -363,7 +363,7 @@ function puntos_multi_svg($valores, $ancho, $largo)
 	var x1 = 0;//inicial
 	var y1 = largo - 0;//inicial
 	$radio = 5;
-	for(var i = 1; $i<=$m; $i++)
+	for(let i = 1; $i<=$m; $i++)
 	{
 		$x2 = $ancho_columna+$x1;
 		$y2 = $y1 - (($valores[$i-1])*$altura_columna);
@@ -427,7 +427,7 @@ function pastel_svg($valores, $ancho, $largo)
 	// Crear imagen
 	$total = 0;
 	$m = count(valores);
-	for(var i = 0; $i<$m; $i++)
+	for(let i = 0; $i<$m; $i++)
 	{
 		$total = $total + $valores[$i];
 	}
@@ -497,7 +497,7 @@ function lineas_svg($valores, $ancho, $largo)
 	var x1 = 0;//inicial
 	$y1 = $largo - abs((($valores[0])*$altura_columna));//inicial
 	echo "<polyline points='$x1,$y1";
-	for(var i = 1; $i<=$m; $i++)
+	for(let i = 1; $i<=$m; $i++)
 	{
 		$x2 = $ancho_columna+$x1;
 		$y2 = $largo - ((($max-$valores[$i-1]))*$altura_columna);
@@ -524,7 +524,7 @@ function lineas_marcas_svg($valores, $ancho, $largo)
 	var x1 = 0;//inicial
 	$y1 = $largo - (($valores[0])*$altura_columna);//inicial
 	$radio = 5;
-	for(var i = 1; $i<=$m; $i++)
+	for(let i = 1; $i<=$m; $i++)
 	{
 		$x2 = $ancho_columna+$x1;
 		$y2 = $largo - (($valores[$i-1])*$altura_columna);
@@ -579,7 +579,7 @@ function lineas_marcas_multi_svg($valores, $ancho, $largo)
 	var x1 = 0;//inicial
 	$y1 = $largo - (($valores[0])*$altura_columna);//inicial
 	$radio = 5;
-	for(var i = 1; $i<=$m; $i++)
+	for(let i = 1; $i<=$m; $i++)
 	{
 		$x2 = $ancho_columna+$x1;
 		$y2 = $largo - (($valores[$i-1])*$altura_columna);
@@ -711,7 +711,7 @@ function horizontales_svg($valores, $ancho, $largo)
 	var x1 = 0;//inicial
 	var y1 = 0;//inicial
 	$lista_color = ['yellow', 'blue', 'red'];
-	for(var i = 1; $i<=$m; $i++)
+	for(let i = 1; $i<=$m; $i++)
 	{
 		$x2 = ($valores[$i-1])*$altura_columna + $x1;
 		$y2 = $ancho_columna + $y1;
@@ -737,7 +737,7 @@ function horizontales_agrupada_svg($valores, $ancho, $largo)
 	echo "<svg width='$ancho' height='$largo'>";
 	var x1 = 0;//inicial
 	var y1 = 0;//inicial
-	for(var i = 1; $i<=$m; $i++)
+	for(let i = 1; $i<=$m; $i++)
 	{
 		$x2 = ($valores[$i-1])*$altura_columna + $x1;
 		$y2 = $ancho_columna + $y1;
@@ -762,7 +762,7 @@ function horizontales_apilada_svg($valores, $ancho, $largo)
 	echo "<svg width='$ancho' height='$largo'>";
 	var x1 = 0;//inicial
 	var y1 = 0;//inicial
-	for(var i = 1; $i<=$m; $i++)
+	for(let i = 1; $i<=$m; $i++)
 	{
 		$x2 = ($valores[$i-1])*$altura_columna + $x1;
 		$y2 = $ancho_columna + $y1;
@@ -859,7 +859,7 @@ function estrella_svg($valores, $ancho, $largo)
 	// Crear imagen
 	$total = 0;
 	$m = count(valores);
-	for(var i = 0; $i<$m; $i++)
+	for(let i = 0; $i<$m; $i++)
 	{
 		$total = $total + $valores[$i];
 	}
@@ -890,7 +890,7 @@ function estrella_puntos_svg($valores, $ancho, $largo)
 	// Crear imagen
 	$total = 0;
 	$m = count(valores);
-	for(var i = 0; $i<$m; $i++)
+	for(let i = 0; $i<$m; $i++)
 	{
 		$total = $total + $valores[$i];
 	}
@@ -950,7 +950,7 @@ function area_svg($valores, $ancho, $largo)
 	var x1 = 0;//inicial
 	var y1 = largo - 0;//inicial
 	echo "<polygon points='$x1,$y1";
-	for(var i = 1; $i<=$m; $i++)
+	for(let i = 1; $i<=$m; $i++)
 	{
 		$x2 = $ancho_columna+$x1;
 		$y2 = $y1 - (($valores[$i-1])*$altura_columna);
