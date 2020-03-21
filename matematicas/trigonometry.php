@@ -82,7 +82,7 @@ class trig
 			}
 			for($i=0; $i<10; $i++)
 			{
-				$res = $res + math::factorial(2*$i)*($x**(2*$i+1))/((2*$i+1)*4**($i)*factorial($i)**2);
+				$res += math::factorial(2*$i)*($x**(2*$i+1))/((2*$i+1)*4**($i)*factorial($i)**2);
 			}
 		}
 		return $res;
@@ -102,7 +102,7 @@ class trig
 		$res = 0;
 		for($i=0; $i<10; $i++)
 		{
-			$res = $res + ((-1)**($i)*($x**(2*$i+1)))/(2*$i+1);
+			$res += ((-1)**($i)*($x**(2*$i+1)))/(2*$i+1);
 		}
 	}
 }

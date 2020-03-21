@@ -44,18 +44,18 @@ function picalc($x, $l)
 	{
 		if($p[$i]<0)
 		{
-			$b=-(int)($p[$i] / $k) + 1;
-			$p[$i]=$p[$i]+($b*$k);
-			$p[$i-1]=$p[$i-1]-$b;
+			$b = -(int)($p[$i] / $k) + 1;
+			$p[$i] = $p[$i]+($b*$k);
+			$p[$i-1] = $p[$i-1]-$b;
 		}
 	}
-	for($i=$x;$i>=1;$i--)
+	for($i=$x; $i>=1; $i--)
 	{
 		if($p[$i]>=$k)
 		{
-			$b=(int)($p[$i]/$k);
-			$p[$i]=$p[$i]-($b*$k);
-			$p[$i-1]=$p[$i-1]+$b;
+			$b = (int)($p[$i]/$k);
+			$p[$i] = $p[$i]-($b*$k);
+			$p[$i-1] = $p[$i-1]+$b;
 		}
 	}
 	return $p;
@@ -71,10 +71,10 @@ function calc($t, &$p, $s, $a, $x, $k, $r, $d, $n, $m, $q)
 		$cont=0;
 		for($i=$a;$i<$x && $cont<5;$i++)
 		{
-			$m=$t[$i]+($k*$r);
-			$q=(int)($m/$d);
-			$r=$m%$d;
-			$t[$i]=$q;
+			$m = $t[$i]+($k*$r);
+			$q = (int)($m/$d);
+			$r = $m%$d;
+			$t[$i] = $q;
 			if($t[$i]==0)
 			{
 				$cont++;

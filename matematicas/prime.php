@@ -8,24 +8,24 @@ function coprime($primos, $size, &$valor,&$var)
 		$var=$var*($primos[$i]-1);
 		$valor=$valor*$primos[$i];
 	}
-		$i=$primos[$size-1]+2;
+	$i=$primos[$size-1]+2;
 	$cont=1;
 	do
 	{
-			$band=true;
-			for($j=0;$j<$size && $band && ($i>=($primos[$j]**2));$j++)
+		$band=true;
+		for($j=0;$j<$size && $band && ($i>=($primos[$j]**2));$j++)
+		{
+			if($i%$primos[$j]==0)
 			{
-				if($i%$primos[$j]==0)
-				{
-					$band=false;
-				}
+				$band=false;
 			}
-			if($band)
-			{
-				$num[$cont]=$i;
-				$cont++;
-			}
-			$i=$i+2;//hacer mas eficiente
+		}
+		if($band)
+		{
+			$num[$cont]=$i;
+			$cont++;
+		}
+		$i=$i+2;//hacer mas eficiente
 	}while($cont<$var);
 	return $num;
 }

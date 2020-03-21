@@ -1,5 +1,11 @@
 <?php
+declare(strict_types=1);
 include('operadores.php');
+
+class series
+{
+	
+}
 $limit = 20;
 
 function sumando($x)//sumas sucesivas de números
@@ -127,7 +133,7 @@ function altfactorial($x)//va sumando factoriales positivos y negativos
 	{
 		for($i=1; $i<$x; $i++)
 		{
-			$num = $num + ((-1)**($x-$i)) * factorial($i);
+			$num += ((-1)**($x-$i)) * factorial($i);
 		}
 	}
 	return $num;
@@ -185,7 +191,7 @@ function rares($x)//revisar
 	{
 		for($i=1; $i<$x; $i++)
 		{
-			$num = $num + comb(2*$i, $i);
+			$num += comb(2*$i, $i);
 		}
 	}
 	return $num;
@@ -198,7 +204,7 @@ function antes($x)//revisar
 	{
 		for($i=1; $i<$x; $i++)
 		{
-			$num = $num + $i/($i+1);
+			$num += $i/($i+1);
 		}
 	}
 	return $num;
@@ -211,7 +217,7 @@ function despues($x)//revisar
 	{
 		for($i=1; $i<$x; $i++)
 		{
-			$num = $num + ($i+1)/$i;
+			$num += ($i+1)/$i;
 		}
 	}
 	return $num;
@@ -228,7 +234,7 @@ function bell($x)//obtiene los números de bell
 		{
 			for($j=0; $j<$i; $j++)
 			{
-				$num[$i] = $num[$i] + binomial($i - 1, $j) * num[$j];
+				$num[$i] += binomial($i - 1, $j) * num[$j];
 			}
 		}
 	}
@@ -252,7 +258,7 @@ function bernoulli($x, $n)//obtiene los números de bernoulli
 	{
 		for($i=0; $i<=$x; $i++)
 		{
-			$num = $num + ((-1)**$i) * (Worpitzky($x, $i) / ($i + 1));
+			$num += ((-1)**$i) * (Worpitzky($x, $i) / ($i + 1));
 		}
 	}
 	return $num;
@@ -378,7 +384,7 @@ function polilog($x, $n)//realiza el polilogaritmo de x base n
 	{
 		for($i=1; $i<20; $i++)
 		{
-			$num = $num + ($x**$i)/($i**$n);
+			$num += ($x**$i)/($i**$n);
 		}
 	}
 	return $num;
@@ -392,7 +398,7 @@ function xzeta($x, $n)
 		for($i=1; $i<20; $i++)
 		{
 			$k = 2 * $i + 1;
-			$num = $num + ($x**$k)/($k**$n);
+			$num += ($x**$k)/($k**$n);
 		}
 	}
 	return $num;
@@ -440,7 +446,7 @@ function exprime($x, $n)//suma de potencia de primos
 	{
 		for($i=0;$i<$x;$i++)
 		{
-			$num = $num + (prime($i)**$n);
+			$num += (prime($i)**$n);
 		}
 	}
 	return $num;
@@ -453,7 +459,7 @@ function invpolilog($x, $y)//inverso del polilogaritmo
 	{
 		for($i=1;$i<20;$i++)
 		{
-			$num = $num + ($i**$x) / ($y**$i);
+			$num += ($i**$x) / ($y**$i);
 		}
 	}
 	return $num;
@@ -486,7 +492,7 @@ function euler($x, $y)//numeros de euler
 	$num = 0;
 	for($i=0; $i<=$y; $i++)
 	{
-		$num = $num + (((-1)**$i) * binomial($x + 1, $i) * (($y + 1 - $i)**$x));
+		$num += (((-1)**$i) * binomial($x + 1, $i) * (($y + 1 - $i)**$x));
 	}
 	return $num;
 }
@@ -496,7 +502,7 @@ function stirling($x, $y)//números de stirling
 	$num = 0;
 	for($i=1; $i<=$y; $i++)
 	{
-		$num = $num + (-1)**($y - $i) * binomial($y, $i) * $i**$x;
+		$num += (-1)**($y - $i) * binomial($y, $i) * $i**$x;
 	}
 	$num = $num / factorial($y);
 	return $num;
@@ -507,7 +513,7 @@ function expcoef($x, $n)//revisar
 	$num = 0;
 	for($i = 1; $i <= $n; $i++)
 	{
-		$num = $num + $i * ($x**($i - 1)) * ((-1)**($n - $i));
+		$num += $i * ($x**($i - 1)) * ((-1)**($n - $i));
 	}
 	return $num;
 }
@@ -527,7 +533,7 @@ function qexponent($x, $n)
 	$num = 0;
 	for($i = 1; $i <= 20; $i++)
 	{
-		$num = $num + ($x**$i)/qfactorial($n, $i);
+		$num += ($x**$i)/qfactorial($n, $i);
 	}
 	return $num;
 }
@@ -539,7 +545,7 @@ function qanalog($x, $n)
 	{
 		for($i = 0; $i < $n; $i++)
 		{
-			$num = $num + ($x**$i);
+			$num += ($x**$i);
 		}
 	}
 	return $num;
@@ -596,7 +602,7 @@ function touchard($x, $y)
 	{
 		for($i = 1; $i <= $y; $i++)
 		{
-			$num = $num + stirling($y, $i) *($x**$i);
+			$num += stirling($y, $i) *($x**$i);
 		}
 	}
 	return $num;
@@ -661,7 +667,7 @@ function worpitzky($x, $y)
 	{
 		for($i = 0; $i <= $y; $i++)
 		{
-			$num = $num + ((-1)**($i + $y)) * (($i + 1)**$x) * comb($y, $i);
+			$num += ((-1)**($i + $y)) * (($i + 1)**$x) * comb($y, $i);
 		}
 	}
 	return $num;
@@ -677,7 +683,7 @@ function sumprod($x, $n)//revisar
 		$num3 = 1;
 		for($i = 0; $i < $q; $i++)
 		{
-			$num2 = $num2 + $nums[$i];
+			$num2 += $nums[$i];
 			$num3 = $num3 * $nums[$i];
 		}
 		$num = $num2 * $num3;
@@ -695,7 +701,7 @@ function numexp($x, $n)//revisar
 		$num = 0;
 		for($i = 0; $i < $q; $i++)
 		{
-			$num = $num + ($nums[$i]**2);
+			$num += ($nums[$i]**2);
 		}
 		return $num;
 	}
@@ -772,7 +778,7 @@ function lerch($x, $y, $z)
 	$num = 0;
 	for($i = 0; $i <= 20; $i++)
 	{
-		$num = $num + ($x**$i) / (($i + $z)**$y);
+		$num += ($x**$i) / (($i + $z)**$y);
 	}
 	return $num;
 }
@@ -795,7 +801,7 @@ function regurbeta($x, $y, $z)
 	$a = $y + $z - 1;
 	for($i = $y; $i <= $a; $i++)
 	{
-		$num = $num + (comb($a, $i) * ($x**$i) * ((1 - $x)**($a - $i)));
+		$num += (comb($a, $i) * ($x**$i) * ((1 - $x)**($a - $i)));
 	}
 	return $num;
 }
@@ -893,7 +899,7 @@ function multinomial($x)
 		$num2 = 0;
 		for($j = 0; $j < $i; $j++)
 		{
-			$num2 = $num2 + $x[$j];
+			$num2 += $x[$j];
 		}
 		$num = $num * comb($num2, $x[$i]);
 	}
