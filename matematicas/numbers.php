@@ -1,5 +1,4 @@
 <?php
-//gausseuler //namespace GaussEuler;
 declare(strict_types=1);
 
 class numbers
