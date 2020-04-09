@@ -21,7 +21,7 @@ function estrella_svg($valores, $ancho, $largo)
 	{
 		$angulo = ($i%$m)*trig::TAU/$m;
 		$radio_valor = ($valores[$i % $m] / $rango)*$radio;
-		$x2 = $ct->x +  $radio_valor*sin($angulo);
+		$x2 = $ct->x + $radio_valor*sin($angulo);
 		$y2 = $ct->y + $radio_valor*cos($angulo);
 		$rx = $ct->x + $radio*sin($angulo);
 		$ry = $ct->y + $radio*cos($angulo);
@@ -56,7 +56,7 @@ function estrella_marcas_svg($valores, $ancho, $largo)
 	{
 		$angulo = ($i%$m)*trig::TAU/$m;
 		$radio_valor = ($valores[$i % $m] / $rango)*$radio;
-		$x2 = $ct->x +  $radio_valor*sin($angulo);
+		$x2 = $ct->x + $radio_valor*sin($angulo);
 		$y2 = $ct->y + $radio_valor*cos($angulo);
 		$rx = $ct->x + $radio*sin($angulo);
 		$ry = $ct->y + $radio*cos($angulo);
@@ -97,7 +97,7 @@ function estrella_multi_svg($valores, $ancho, $largo)
 		{
 			$angulo = ($i%$cant)*trig::TAU/$m;
 			$radio_valor = ($valores[$i % $cant][$j] / $rango)*$radio;
-			$x2 = $ct->x +  $radio_valor*sin($angulo);
+			$x2 = $ct->x + $radio_valor*sin($angulo);
 			$y2 = $ct->y + $radio_valor*cos($angulo);
 			$rx = $ct->x + $radio*sin($angulo);
 			$ry = $ct->y + $radio*cos($angulo);
@@ -137,7 +137,7 @@ function estrella_marcas_multi_svg($valores, $ancho, $largo)
 		{
 			$angulo = ($i%$cant)*trig::TAU/$m;
 			$radio_valor = ($valores[$i % $cant][$j] / $rango)*$radio;
-			$x2 = $ct->x +  $radio_valor*sin($angulo);
+			$x2 = $ct->x + $radio_valor*sin($angulo);
 			$y2 = $ct->y + $radio_valor*cos($angulo);
 			$rx = $ct->x + $radio*sin($angulo);
 			$ry = $ct->y + $radio*cos($angulo);

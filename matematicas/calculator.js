@@ -86,7 +86,7 @@ function exponente(x, y)
 	var tam = x.length;
 	//volver a y binario y hacer los cuadrados unicamente
 	//usar la multiplicacion cada vez
-	for(let i=0; y==0 || y==1; i++)
+	for(let i=0; y === 0 || y==1; i++)
 	{
 		exponent[i] = (int)(y/2);
 		exponent[i+1] = y%2;

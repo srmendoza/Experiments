@@ -9,7 +9,7 @@ class trig
 	public static function sin(float $x)
 	{
 		$num = 0;
-		if(0 == $x)
+		if(0 === $x)
 		{
 			$num = 0;
 		}
@@ -31,7 +31,7 @@ class trig
 	public static function cos(float $x)
 	{
 		$num = 0;
-		if(0 == $x)
+		if(0 === $x)
 		{
 			$num = 1;
 		}
@@ -54,7 +54,7 @@ class trig
 	{
 		$res = 0;
 		$num = self::sin($x);
-		if(0 == $num || 1 == $num)
+		if(0 === $num || 1 === $num)
 		{
 			$res = 0;
 		}
@@ -69,7 +69,7 @@ class trig
 	public static function arcsin(float $x)
 	{
 		$res = 0;
-		if(0 == $x)
+		if(0 === $x)
 		{
 			$res = 0;
 		}
@@ -111,7 +111,7 @@ class hiperbolic
 	public static function sin()
 	{
 		$num = 0;
-		if(0 == $x)
+		if(0 === $x)
 		{
 			$num = 0;
 		}
@@ -128,7 +128,7 @@ class hiperbolic
 	public static function cos()
 	{
 		$num = 0;
-		if(0 == $x)
+		if(0 === $x)
 		{
 			$num = 0;
 		}

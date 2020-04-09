@@ -38,7 +38,7 @@ class numbers
 		$num = 1;
 		if($k != 0)
 		{
-			if(1 == $k)
+			if(1 === $k)
 			{
 				$num = $n;
 			}

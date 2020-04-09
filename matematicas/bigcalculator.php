@@ -170,7 +170,7 @@ class big_calculator
 		for($i=0; $i<$tam2; $i++)
 		{
 			$sumandos[$i+1] = $this->multiplicar($sumandos[$i], $sumandos[$i]);
-			if(1 == $exponent[$i])
+			if(1 === $exponent[$i])
 			{
 				$result = $this->multiplicar($result, $sumandos[$i]);
 			}

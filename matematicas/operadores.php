@@ -31,7 +31,7 @@ class math
 
 	public static function extendeu(int $a, int $b, &$x, &$t, &$d)
 	{
-		if(0 == $b)
+		if(0 === $b)
 		{
 			$d = $a;
 			$x = 1;
@@ -66,12 +66,12 @@ class math
 		$root = self::introot($n) + 1;
 		for($i = 2; $i <= $root; $i++)//crecimiento en -1 +1 de 6
 		{
-			if(($n % $i) == 0)
+			if(($n % $i) === 0)
 			{
 				$n = ($n / $i);
 				$fact[$count]['fact'] = $i;
 				$fact[$count]['exp'] = 1;
-				while(($n % $i) == 0)
+				while(($n % $i) === 0)
 				{
 					$n = ($n / $i);
 					$fact[$count]['exp']++;
@@ -124,7 +124,7 @@ class math
 	public static function exponentes(float $x)//función de taylor del exponente
 	{
 		$num = 1;
-		if(0 == $x)
+		if(0 === $x)
 		{
 			$num = 1;
 		}
@@ -202,7 +202,7 @@ class math
 
 	public static function mcd(int $x, int $n)//: int
 	{
-		if(0 == $x)
+		if(0 === $x)
 		{
 			return $n;
 		}
@@ -254,13 +254,13 @@ class math
 	public static function nroot(int $n, float $r)
 	{
 		$x2 = 0;
-		if(1 == $n)
+		if(1 === $n)
 		{
 			$x2 = 1;
 		}
 		else
 		{
-			if((($r%2) == 0  && $n > 0) || (($r%2) != 0))
+			if((($r%2) === 0 && $n > 0) || (($r%2) != 0))
 			{
 				$x2 = $n / 2;
 				do

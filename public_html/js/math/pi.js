@@ -66,7 +66,7 @@ function calc(t, p, s, a, x, k, r, d, n, m, q)
 			q = (long)(m / d);
 			r = m % d;
 			t[i] = q;
-			if (t[i] == 0)
+			if (t[i] === 0)
 			{
 				cont++;
 			}
@@ -80,7 +80,7 @@ function calc(t, p, s, a, x, k, r, d, n, m, q)
 			p[i] = p[i] + (s * q);
 		}
 		r = 0;
-		if (t[a] == 0)
+		if (t[a] === 0)
 		{
 			a++;
 		}

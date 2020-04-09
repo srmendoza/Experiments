@@ -96,7 +96,7 @@ function fibbonaccimat($x)//realiza la sucesión de fibbonacci con matrices
 	$d1 = 1;
 	while($i > 0)
 	{
-		if(($i % 2) == 1)
+		if(($i % 2) === 1)
 		{
 			$a = ($d1 * $b1) + ($c1 * $a1);
 			$b = ($d1 * ($b1 + $a1)) + ($c1 * $b1);
@@ -267,7 +267,7 @@ function bernoulli($x, $n)//obtiene los números de bernoulli
 function comb($x, $n)//realiza la combinación de de x en n
 {
 	$num = 1;
-	if($n == $x || $n == 0)
+	if($n === $x || $n === 0)
 	{
 		$num = 1;
 	}
@@ -322,7 +322,7 @@ function perm($x, $n)//realiza las permutaciones de x en n
 	}
 	else
 	{
-		if($n == $x || $n == ($x - 1))
+		if($n === $x || $n === ($x - 1))
 		{
 			$num = factor($x);
 		}
@@ -742,7 +742,7 @@ function expmod($x, $t, $s)//revisar
 	for($j = 0; $j < $r; $j++)
 	{
 		$num = (($num % $s) * ($num % $s)) % $s;
-		if($expo[$j] == 1)
+		if($expo[$j] === 1)
 		{
 			$num = (($num % $s) * ($x % $s)) % $s;
 		}

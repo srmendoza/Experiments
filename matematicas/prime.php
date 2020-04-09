@@ -15,7 +15,7 @@ function coprime($primos, $size, &$valor,&$var)
 		$band=true;
 		for($j=0;$j<$size && $band && ($i>=($primos[$j]**2));$j++)
 		{
-			if($i%$primos[$j]==0)
+			if($i%$primos[$j] === 0)
 			{
 				$band=false;
 			}
@@ -47,7 +47,7 @@ function prime($x, $y)
 			$num=$valor*$k+$coprimo[$j];
 			for($l=0;$l<$i && $band && ($num>=($primos[$l]**2));$l++)
 			{
-				if($num%$primos[$l]==0)
+				if($num%$primos[$l] === 0)
 				{
 					$band=false;
 				}

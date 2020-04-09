@@ -93,7 +93,7 @@ function cammay(&$x, &$y)
 
 function mcd(x, n)
 {
-	if(x == 0)
+	if(x === 0)
 	{
 		return n;
 	}
@@ -113,7 +113,7 @@ function mcd(x, n)
 
 function extendeu(a, b, &x, &t, &d)
 {
-	if(b == 0)
+	if(b === 0)
 	{
 		$d = $a;
 		$x = 1;
@@ -147,12 +147,12 @@ function factorize($n, &$fact, &$exp)
 	$root = introot($n) + 1;
 	for($i = 2; $i <= $root; $i++)
 	{
-		if($n % $i == 0)
+		if($n % $i === 0)
 		{
 			$n /= $i;
 			$fact[$count] = $i;
 			$exp[$count] = 1;
-			while($n % $i == 0)
+			while($n % $i === 0)
 			{
 				$n /= $i;
 				$exp[$count]++;

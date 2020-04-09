@@ -158,7 +158,7 @@ class matriz
 		}
 		else
 		{
-			if($tam == 1)
+			if($tam === 1)
 			{
 				$num = $mat[0][0];
 			}
@@ -211,7 +211,7 @@ class matriz
 			for($i=0; $i<$tam2; $i++)
 			{
 				$sumandos[$i+1] =$this->multimatcuad($sumandos[$i], $sumandos[$i]);
-				if(1 == $exponent[$i])
+				if(1 === $exponent[$i])
 				{
 					$result=$this->multimatcuad($result, $sumandos[$i]);
 				}

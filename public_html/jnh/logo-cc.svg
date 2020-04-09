@@ -9,23 +9,18 @@
 	height="42"
 	id="svg2759"
 	version="1.0">
-  <defs
-	 id="defs2761" />
-  <metadata
-	 id="metadata2764">
+  <defs id="defs2761" />
+  <metadata id="metadata2764">
 	<rdf:RDF>
-	  <cc:Work
-		 rdf:about="">
+	  <cc:Work rdf:about="">
 		<dc:format>image/svg+xml</dc:format>
 		<dc:type
 			rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
 	  </cc:Work>
 	</rdf:RDF>
   </metadata>
-  <g
-	 id="layer1">
-	<g
-		id="g2370">
+  <g id="layer1">
+	<g id="g2370">
 	  <path
 		 id="path3817_4_"
 		 nodetypes="ccccccc"

@@ -21,7 +21,7 @@ function primos(x, y)
 			var band=true;
 			for(let j=0; j<tam && band && (i>=(primos[j]*primos[j])); j++)
 			{
-				if(i%primos[j]==0)
+				if(i%primos[j] === 0)
 				{
 					band=false;
 				}
@@ -44,7 +44,7 @@ function primos(x, y)
 			var num=valor*k+coprimo[j];
 			for(let l=0; l<i && band && (num>=(primos[l]*primos[l])); l++)
 			{
-				if(num%primos[l]==0)
+				if(num%primos[l] === 0)
 				{
 					band=false;
 				}

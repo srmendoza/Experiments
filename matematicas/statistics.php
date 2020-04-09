@@ -387,7 +387,7 @@ class stats
 		$tam1 = count($valores1);
 		$tam2 = count($valores2);
 		$covarianza = 0;
-		if($tam1 == $tam2)
+		if($tam1 === $tam2)
 		{
 			$tam = $tam1;
 			$prom1 = self::aritmetic_mean($valores1);

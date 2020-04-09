@@ -10,11 +10,11 @@ function salt(size)
 	{
 		var aux=rand[i]%2;
 		var aux2=i%8;
-		if(aux==0)
+		if(aux === 0)
 		{
 			value = value | $bit[$aux2];
 		}
-		if(aux2==0 && i!=0)
+		if(aux2 === 0 && i!=0)
 		{
 			if((value>48 && value<122) && (value<57 || value>65) && (value<90 || value>97))
 			{
