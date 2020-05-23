@@ -26,7 +26,7 @@ class math
 
 	public static function ponderada()
 	{
-		
+
 	}
 
 	public static function extendeu(int $a, int $b, &$x, &$t, &$d)
@@ -110,7 +110,7 @@ class math
 			$x2 = $c / ($a * $x1);
 		}
 	}
-	
+
 	public static function mod(int $num, int $mod)//: int
 	{
 		$num = $num % $mod;
@@ -120,7 +120,7 @@ class math
 		}
 		return $num;
 	}
-	
+
 	public static function exponentes(float $x)//función de taylor del exponente
 	{
 		$num = 1;

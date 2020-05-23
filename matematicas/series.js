@@ -267,19 +267,19 @@ function bernoulli(x, n)//obtiene los números de bernoulli
 function comb(x, n)//realiza la combinación de de x en n
 {
 	var num = 1;
-	if(n == x || n == 0)
+	if(n === x || n === 0)
 	{
 		num = 1;
 	}
 	else
 	{
-		if(n == 1 || n == (x - 1))
+		if(n === 1 || n === (x - 1))
 		{
 			num = x;
 		}
 		else
 		{
-			if(n == 2 || n == (x - 2))
+			if(n === 2 || n === (x - 2))
 			{
 				num = sumando(x - 1);
 			}
@@ -313,11 +313,11 @@ function perm(x, n)//realiza las permutaciones de x en n
 {
 	var num = 1;
 	var a = x - n + 1;
-	if(n == 0)
+	if(n === 0)
 	{
 		num = 1;
 	}
-	if(n == 1)
+	if(n === 1)
 	{
 		num = x;
 	}

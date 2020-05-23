@@ -4,10 +4,10 @@ declare(strict_types=1);
 class big_calculator
 {
 	const FACT = 10**3;
-	
+
 	public function __construct()//array $x, array $y)
 	{
-	
+
 	}
 
 	private function over($result, $i)
@@ -24,7 +24,7 @@ class big_calculator
 		$result[$i] = 0;
 		return $result;
 	}
-	
+
 	public function sumar(array $x, array $y)
 	{
 		$result = [];
@@ -58,7 +58,7 @@ class big_calculator
 		}
 		return $result;
 	}
-	
+
 	public function restar(array $x, array $y)//revisar
 	{
 		$result = [];
@@ -127,7 +127,7 @@ class big_calculator
 		$tam = 0;
 		if($tamx<= $tamy)
 		{
-		
+
 		}
 		else
 		{
@@ -181,10 +181,10 @@ class big_calculator
 	public function modular(array $x, array $y)//pendiente
 	{
 		$result = [];
-		
+
 		return $result;
 	}
-	
+
 	public function comparar(array $x, array $y)
 	{
 		$result = 0;
@@ -203,10 +203,10 @@ class big_calculator
 		{
 			for($i=0; $i<$tam; $i++)
 			{
-		
+
 			}
 		}
-		
+
 		return $result;
 	}
 }

@@ -4,7 +4,7 @@ include('operadores.php');
 
 class series
 {
-	
+
 }
 $limit = 20;
 
@@ -273,13 +273,13 @@ function comb($x, $n)//realiza la combinación de de x en n
 	}
 	else
 	{
-		if($n == 1 || $n == ($x - 1))
+		if($n === 1 || $n === ($x - 1))
 		{
 			$num = $x;
 		}
 		else
 		{
-			if($n == 2 || $n == ($x - 2))
+			if($n === 2 || $n === ($x - 2))
 			{
 				$num = sumando($x - 1);
 			}
@@ -312,11 +312,11 @@ function combrepe($x, $n)//revisar
 function perm($x, $n)//realiza las permutaciones de x en n
 {
 	$num = 1;
-	if($n == 0)
+	if($n === 0)
 	{
 		$num = 1;
 	}
-	if($n == 1)
+	if($n === 1)
 	{
 		$num = $x;
 	}
@@ -422,7 +422,7 @@ function fibbo($x, $y)
 	$d1 = 1;
 	while($i > 0)
 	{
-		if(($i % 2) == 1)
+		if(($i % 2) === 1)
 		{
 			$a = ($d1 * $b1) + ($c1 * $a1);
 			$b = ($d1 * ($b1 + $a1)) + ($c1 * $b1);
@@ -584,7 +584,7 @@ function nfibonacci($x, $t)
 		}
 		return $num[$x + $t - 1];
 	}
-	if($x == 2)
+	if($x === 2)
 	{
 		return (fibbonaci($x));
 	}
@@ -594,7 +594,7 @@ function nfibonacci($x, $t)
 function touchard($x, $y)
 {
 	$num = 1;
-	if($x == 1)
+	if($x === 1)
 	{
 		$num = bell($y);
 	}
@@ -613,7 +613,7 @@ function self($x, $y)//revisar
 	if($y > 2)
 	{
 		$num = [];
-		if(($y % 2) == 0)
+		if(($y % 2) === 0)
 		{
 			$num[0] = $y - 1;
 		}
@@ -646,7 +646,7 @@ function jugexp($x, $n)//revisar
 	{
 		for($i = 1; $i < $x; $i++)
 		{
-			if(($i % 2) == 0)
+			if(($i % 2) === 0)
 			{
 				$num[$i] = root($num[$i - 1]);
 			}
@@ -719,7 +719,7 @@ function knodel($x, $y, $z)
 	do
 	{
 		$num = expmod($i, $exp, $y);
-		if(($num % $y) == 1)
+		if(($num % $y) === 1)
 		{
 			$band = true;
 			$cont++;

@@ -157,7 +157,7 @@ function porcentaje_apilada($valores, $m)
 
 function linea_tendencia($valores)
 {
-	
+
 }
 
 function escala($min, $max)
@@ -166,7 +166,7 @@ function escala($min, $max)
 	$step = ($max - $min) / 5;
 	for($i=0; $i<5; $i++)
 	{
-		
+
 	}
 }
 
@@ -190,7 +190,7 @@ function leyenda($ancho, $largo, $valores, $colores)
 	$m = count($valores);
 	for($i=0; $i<$m; $i++)
 	{
-		
+
 	}
 }
 

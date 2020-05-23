@@ -5,22 +5,22 @@ class numbers
 {
 	public static function Bernoulli(int $x)//pendiente
 	{
-		
+
 	}
 
 	public static function Euler(int $x)
 	{
-		
+
 	}
 
 	public static function Worpitzky()
 	{
-		
+
 	}
 
 	public static function Stirling()
 	{
-		
+
 	}
 
 	public static function binomial(int $n, int $k)//: int//pendiente

@@ -65,7 +65,7 @@ class trig
 		}
 		return $res;
 	}
-	
+
 	public static function arcsin(float $x)
 	{
 		$res = 0;
@@ -144,12 +144,12 @@ class hiperbolic
 
 	public static function tangent()//pendiente
 	{
-		
+
 	}
 
 	public static function sigmoid()//pendiente
 	{
-		
+
 	}
 }
 ?>

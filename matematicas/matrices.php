@@ -5,13 +5,14 @@ class matriz
 {
 	private function identidad($num)
 	{
-	$res = [];
-	for($i=0; $i<$num; $i++)
-	{
-	$res[$i][$i] = 1;
+		$res = [];
+		for($i=0; $i<$num; $i++)
+		{
+			$res[$i][$i] = 1;
+		}
+		return $res;
 	}
-	return $res;
-	}
+
 	public function sumar($a, $b)
 	{
 		$matr = [][];
@@ -92,6 +93,19 @@ class matriz
 			$num = [0];
 			return $num;
 		}
+	}
+
+	public function scalar($mat1, $num)//revisar
+	{
+		$matrizr = [][];
+		for($i = 0; $i < $m; $i++)
+		{
+			for($j = 0; $j < $m; $j++)
+			{
+				$matrizr[$i][$j] = $mat1[$i][$j] * $num;
+			}
+		}
+		return $matrizr;
 	}
 
 	public function multiplicar($mat1, $mat2)//revisar

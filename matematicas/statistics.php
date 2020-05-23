@@ -24,7 +24,7 @@ class stats
 		}
 		return $moda;
 	}
-	
+
 	public static function aritmetic_geometric_mean($x, $y)//pendiente
 	{
 		$g = $y;
@@ -50,7 +50,7 @@ class stats
 			$h = $h_n;
 		}
 	}
-	
+
 	public static function harmonic_mean(array $valores)
 	{
 		$prom = $valores[0];
@@ -78,7 +78,7 @@ class stats
 		}
 		return $numerador / $denominador;
 	}
-	
+
 	public static function geomtric_standard_deviation(array $valores)
 	{
 		$result = 0;
@@ -94,7 +94,7 @@ class stats
 		$desviacion = math::exponentes($desviacion);
 		return $desviacion;
 	}
-	
+
 	public static function least_squares($valores)//pendiente
 	{
 		$pendiente = 0;
@@ -117,12 +117,12 @@ class stats
 
 	public static function cokurtosis($valores1, $valores2)//pendiente
 	{
-		
+
 	}
 
 	public static function coskewness($valores1, $valores2)//pendiente
 	{
-		
+
 	}
 
 	public static function aritmetic_mean($valores)//promedio aritmetico
