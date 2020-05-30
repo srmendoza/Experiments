@@ -6,9 +6,9 @@ class generation
 	private $population;
 	private $matingPool;
 	private $generations;
-private $finished;
-private $target;
-private $mutationRate;
+	private $finished;
+	private $target;
+	private $mutationRate;
 
 	public $DNA;
 

@@ -14,19 +14,19 @@ class neuron
 
 	public function calculate(array $input)
 	{
-$size = $input;
-$sum = 0;
+		$size = $input;
+		$sum = 0;
 		for($i = 0; $i< $size; $i++)
-{
-$sum += $input[$i];
-}
-$res = $this->evaluate ($sum);
+		{
+			$sum += $input[$i];
+		}
+		$res = $this->evaluate ($sum);
 
 	}
 
-public function evaluate($input)
-{
+	public function evaluate($input)
+	{
 
-}
+	}
 }
 ?>
