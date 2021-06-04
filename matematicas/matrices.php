@@ -117,7 +117,7 @@ class matriz
 			{
 				for($k = 0; $k < $m; $k++)
 				{
-					$matrizr[$i][$j] = $matrizr[$i][$j] + ($mat1[$i][$k] * $mat2[$k][$j]);
+					$matrizr[$i][$j] += ($mat1[$i][$k] * $mat2[$k][$j]);
 				}
 			}
 		}
@@ -133,7 +133,7 @@ class matriz
 			{
 				for($k = 0; $k < $m; $k++)
 				{
-					$matrizr[$i][$j] = $matrizr[$i][$j] + ($mat1[$i][$k] * $mat2[$k][$j]);
+					$matrizr[$i][$j] += ($mat1[$i][$k] * $mat2[$k][$j]);
 				}
 			}
 		}
@@ -247,7 +247,7 @@ class matrizcube
 				{
 					for($l = 0; $l < $m; $l++)
 					{
-						$matrizr[$i][$j][$k] = $matrizr[$i][$j][$k] + ($mat1[$i][$j][$l] * $mat2[$i][$l][$k] * $mat3[$l][$j][$k]);
+						$matrizr[$i][$j][$k] += ($mat1[$i][$j][$l] * $mat2[$i][$l][$k] * $mat3[$l][$j][$k]);
 					}
 				}
 			}
@@ -271,7 +271,7 @@ class hypermatrix
 					{
 						for($h = 0; $h < $m; $h++)
 						{
-							$matrizr[$i][$j][$k][$l] = $matrizr[$i][$j][$k][$l] + ($mat1[$i][$j][$k][$h] * $mat2[$i][$j][$h][$l] * $mat3[$i][$h][$k][$l] * $mat4[$h][$j][$k][$l]);
+							$matrizr[$i][$j][$k][$l] += ($mat1[$i][$j][$k][$h] * $mat2[$i][$j][$h][$l] * $mat3[$i][$h][$k][$l] * $mat4[$h][$j][$k][$l]);
 						}
 					}
 				}

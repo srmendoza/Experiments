@@ -59,7 +59,7 @@ class stats
 		{
 			for($i=1; $i<$tam; $i++)
 			{
-				$prom = $prom+1/$valores[$i];
+				$prom += 1/$valores[$i];
 			}
 			$prom = ($tam/$prom);
 		}
@@ -73,8 +73,8 @@ class stats
 		$tam = count($valores);
 		for($i=1; $i<$tam; $i++)
 		{
-			$numerador = $numerador + $valores[$i]**2;
-			$denominador = $denominador + $valores[$i];
+			$numerador += $valores[$i]**2;
+			$denominador += $valores[$i];
 		}
 		return $numerador / $denominador;
 	}
@@ -87,7 +87,7 @@ class stats
 		$desviacion = 0;
 		for($i=0; $i<$tam; $i++)
 		{
-			$desviacion = $desviacion + math::logaritmo_natural($valores[$i] / $promedio)**2;
+			$desviacion += math::logaritmo_natural($valores[$i] / $promedio)**2;
 		}
 		$desviacion = $desviacion / $tam;
 		$desviacion = math::root($desviacion);
@@ -133,7 +133,7 @@ class stats
 		{
 			for($i=1; $i<$tam; $i++)
 			{
-				$prom = $prom+$valores[$i];
+				$prom += $valores[$i];
 			}
 			$prom = ($prom / $tam);
 		}
@@ -173,7 +173,7 @@ class stats
 		{
 			for($i=1; $i<$tam; $i++)
 			{
-				$prom = $prom*$valores[$i];
+				$prom *= $valores[$i];
 			}
 			$prom = math::nroot($prom, $tam);
 		}
@@ -188,7 +188,7 @@ class stats
 		{
 			for($i=1; $i<$tam; $i++)
 			{
-				$prom = $prom + $valores[$i]*$valores[$i];
+				$prom += $valores[$i]*$valores[$i];
 			}
 		}
 		$prom = math::root($prom);
@@ -343,7 +343,7 @@ class stats
 		$momento_central = 0;
 		for($i = 0; $i< $tam; $i++)
 		{
-			$momento_central = $momento_central + ($valores[$i] - $prom)**$k;
+			$momento_central += ($valores[$i] - $prom)**$k;
 		}
 		$momento_central = $momento_central / $tam;
 		return $momento_central;
@@ -365,10 +365,10 @@ class stats
 			$delta_n = $delta / $n;
 			$delta_n2 = $delta_n**2;
 			$term1 = $delta * $delta_n * $n1;
-			$m4 = $m4 + $term1*$delta_n2*($n*$n + 3*$n +3) + 6*$delta_n2*$m2 - 4*$delta_n*$m3;
-			$m3 = $m3 + $term1*$delta_n*($n-2) - 3*$delta_n*$m2;
-			$m2 = $m2 + $term1;
-			$m1 = $m1 + $delta_n;
+			$m4 += $term1*$delta_n2*($n*$n + 3*$n +3) + 6*$delta_n2*$m2 - 4*$delta_n*$m3;
+			$m3 += $term1*$delta_n*($n-2) - 3*$delta_n*$m2;
+			$m2 += $term1;
+			$m1 += $delta_n;
 		}
 		$kurtosis = $n*$m4/$m2**2;//-3;
 		$skewness = math::root($n)*$m3/root($m2**3);
@@ -410,9 +410,9 @@ class stats
 		{
 			$n++;
 			$dx = $valores1[$i] - $meanx;
-			$meanx = $meanx + $dx / $n;
-			$meany = $meany + ($valores2[$i] - $meany) / $n;
-			$C = $C + $dx * ($valores2[$i] - $meany);
+			$meanx += $dx / $n;
+			$meany += ($valores2[$i] - $meany) / $n;
+			$C += $dx * ($valores2[$i] - $meany);
 		}
 
 
@@ -445,7 +445,7 @@ class stats
 		$sum = 0;
 		for($i=0; $i<$tam; $i++)
 		{
-			$sum = $sum + math::abs($valores[$i]-$center);
+			$sum += math::abs($valores[$i]-$center);
 		}
 		return $sum/$tam;
 	}

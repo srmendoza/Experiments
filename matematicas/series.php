@@ -76,8 +76,8 @@ function dbfactor($x)
 	{
 		do
 		{
-			$num = $num*$x;
-			$x = $x-2;
+			$num *= $x;
+			$x -= 2;
 		}while($x>1);
 	}
 	return $num;
@@ -156,7 +156,7 @@ function primorial($x)//multiplicación sucesiva de números primos
 	{
 		for($i=1; $i<$x; $i++)
 		{
-			$num = $num * prime($i);
+			$num *= prime($i);
 		}
 	}
 	return $num;
@@ -174,7 +174,7 @@ function multg($x)//revisar
 			$j = 1;
 			do
 			{
-				$num = $num*$k;
+				$num *= $k;
 				$i++;
 				$j++;
 			}while($i<=$x && $j<=$k);
@@ -331,7 +331,7 @@ function perm($x, $n)//realiza las permutaciones de x en n
 			$a = $x - $n + 1;
 			for($i = $a; $i <= $x; $i++)
 			{
-				$num = $num * $i;
+				$num *= $i;
 			}
 		}
 	}
@@ -477,7 +477,7 @@ function multy($x, $y)//revisar
 			$j = 1;
 			do
 			{
-				$num = $num * $k;
+				$num *= $k;
 				$i++;
 				$j++;
 			} while($i <= $x && $j <= $y);
@@ -523,7 +523,7 @@ function risingfact($x, $n)//revisar
 	$num = 1;
 	for($i=$x; $i<=$x+$n-1; $i++)
 	{
-		$num = $num*$i;
+		$num *= $i;
 	}
 	return $num;
 }
@@ -558,7 +558,7 @@ function qfactorial($x, $n)
 	{
 		for($i = 2; $i <= $n; $i++)
 		{
-			$num = $num * qanalog($x, $i);
+			$num *= qanalog($x, $i);
 		}
 	}
 	return $num;
@@ -579,7 +579,7 @@ function nfibonacci($x, $t)
 		{
 			for($j = 1; $j <= $t; $j++)
 			{
-				$num[$i] = $num[$i] + $num[$i - $j];
+				$num[$i] += $num[$i - $j];
 			}
 		}
 		return $num[$x + $t - 1];
@@ -684,7 +684,7 @@ function sumprod($x, $n)//revisar
 		for($i = 0; $i < $q; $i++)
 		{
 			$num2 += $nums[$i];
-			$num3 = $num3 * $nums[$i];
+			$num3 *= $nums[$i];
 		}
 		$num = $num2 * $num3;
 		return $num;
@@ -757,7 +757,7 @@ function qpochhammer($x, $y, $z)
 	{
 		for($i = 0; $i <= $z - 1; $i++)
 		{
-			$num = $num * (1 - $x * ($y**$i));
+			$num *= (1 - $x * ($y**$i));
 		}
 	}
 	return $num;
@@ -768,7 +768,7 @@ function kpochhammer($x, $y, $z)
 	$num = 1;
 	for($i = 0; $i <= ($y - 1); $i++)
 	{
-		$num = $num * ($x + ($i * $z));
+		$num *= ($x + ($i * $z));
 	}
 	return $num;
 }
@@ -789,7 +789,7 @@ function qbinomial($x, $n)
 	$a = $y - $z + 1;
 	for($i = $a; $i <= $y; $i++)
 	{
-		$num = $num * qanalog($x, $i);
+		$num *= qanalog($x, $i);
 	}
 	$num = $num / qfactorial($x, $z);
 	return $num;
@@ -824,9 +824,9 @@ function sergesecuen($x, $t, $s, $r)
 			{
 				for($j = 1; $j <= $s1; $j++)
 				{
-					$num[$i] = $num[$i] + ($s[$j - 1] * $num[$i - $j]);
+					$num[$i] += ($s[$j - 1] * $num[$i - $j]);
 				}
-				$num[i] = $num[$i] + $r;
+				$num[$i] += $r;
 			}
 		}
 		return $num[$x];
@@ -839,7 +839,7 @@ function dichirel($x)
 	$num = 0;
 	for($i = 1; $i <= 50; $i++)
 	{
-		$num = $num + 1 / ($i**$x);
+		$num += 1 / ($i**$x);
 	}
 	return $num;
 }
@@ -884,7 +884,7 @@ function qgeneralize($x, $y, $z)
 	{
 		for($j = 1; $j <= $y[$i]; $j++)
 		{
-			$num = $num * ($x - (($i - 1) / $z) + $j - 1);
+			$num *= ($x - (($i - 1) / $z) + $j - 1);
 		}
 	}
 	return $num;
@@ -901,7 +901,7 @@ function multinomial($x)
 		{
 			$num2 += $x[$j];
 		}
-		$num = $num * comb($num2, $x[$i]);
+		$num *= comb($num2, $x[$i]);
 	}
 	return $num;
 }
