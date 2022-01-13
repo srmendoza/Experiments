@@ -1,5 +1,5 @@
 <?php
-include("../matematicas/bigcalculator.php");
+include("../../mathcrypto/matematicas/bigcalculator.php");
 $calc = new big_calculator();
 ?>
 <!DOCtype html>
@@ -12,20 +12,19 @@ Bienvenido
 
 <?php
 
-$p = array(0, 0, 1);
-$q = array(2);
+$p = [0, 0, 1];
+$q = [0, 0, 2];
 
-//$sum = $calc->sumar($p, $q);
+//$sum = $calc->add($p, $q);
+//echo $calc->imprimir();
 $res = $calc->restar($p, $q);
-//$mul = $calc->multiplicar($p, $p);
+echo $calc->imprimir();
+//$mul = $calc->multiplicar($p, $q);
+//echo $calc->imprimir();
 //$div = $calc->dividir($p, $q);
-$pot = $calc->potenciar($q, 200);
-
-//print_r($sum);
-print_r($res);
-//print_r($mul);
-//print_r($div);
-print_r($pot);
+//echo $calc->imprimir();
+//$pot = $calc->potenciar($q, 2);
+//echo $calc->imprimir();
 ?>
 </body>
 </html>

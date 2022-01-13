@@ -4,7 +4,7 @@ function sumando(x)//sumas sucesivas de números
 	if(x > 1)
 	{
 		num = (x * (x + 1)) / 2;
-	} 
+	}
 	return num;
 }
 

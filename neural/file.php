@@ -9,7 +9,7 @@ class neuron
 
 	public function __construct(int $size)
 	{
-//random
+		//random
 	}
 
 	public function calculate(array $input)
@@ -20,13 +20,12 @@ class neuron
 		{
 			$sum += $input[$i];
 		}
-		$res = $this->evaluate ($sum);
-
+		$res = $this->evaluate($sum);
 	}
 
 	public function evaluate($input)
 	{
-
+		//pendiente
 	}
 }
 ?>

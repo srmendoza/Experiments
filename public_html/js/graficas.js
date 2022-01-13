@@ -133,7 +133,7 @@ function porcentaje_apilada($valores, $m)
 	{
 		for($j=0; $j<$m; $j++)
 		{
-			
+			//exito
 		}
 	}
 	return $valores;
@@ -145,7 +145,7 @@ function escala($min, $max)
 	$step = ($max - $min) / 5;
 	for($i=0; $i<5; $i++)
 	{
-		
+		//exito
 	}
 }
 
@@ -163,25 +163,25 @@ function leyenda($ancho, $largo, $valores)
 	$m = count(valores);
 	for($i=0; $i<$m; $i++)
 	{
-		
+		//exito
 	}
 }
 
 function colores($cantidad)
 {
 	$color = ['#000000', '#ffffff', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'];
-	//return 
+	//return
 }
 
 //verticales
 function verticales_svg($valores, $ancho, $largo)
 {
 	var altura = 80;
-	// Crear imagen
+	//Crear imagen
 	$m = count(valores);
 
 	var ancho_columna = (ancho * 9/10) / (m);
-	// buscar la escala
+	//buscar la escala
 	var max = maximo(valores, m);
 
 	var altura_columna = (largo * 9/10)/ rango;
@@ -203,11 +203,11 @@ function verticales_svg($valores, $ancho, $largo)
 function verticales_agrupada_svg($valores, $ancho, $largo)
 {
 	var altura = 80;
-	// Crear imagen
+	//Crear imagen
 	$m = count(valores);
 
 	var ancho_columna = (ancho * 9/10) / (m);
-	// buscar la escala
+	//buscar la escala
 	var max = maximo_multi(valores, m);
 	var altura_columna = (largo * 9/10)/ rango;
 	echo "<svg width='$ancho' height='$largo'>";
@@ -226,11 +226,11 @@ function verticales_agrupada_svg($valores, $ancho, $largo)
 function verticales_apilada_svg($valores, $ancho, $largo)
 {
 	var altura = 80;
-	// Crear imagen
+	//Crear imagen
 	$m = count(valores);
 
 	var ancho_columna = (ancho * 9/10) / (m);
-	// buscar la escala
+	//buscar la escala
 	var max = maximo_multi(valores, m);
 	var altura_columna = (largo * 9/10)/ rango;
 	echo "<svg width='$ancho' height='$largo'>";
@@ -321,11 +321,11 @@ function verticales_apliada_canvas($valores, $ancho, $largo)
 function puntos_svg($valores, $ancho, $largo)
 {
 	var altura = 80;
-	// Crear imagen
+	//Crear imagen
 	$m = count(valores);
 
 	var ancho_columna = (ancho * 9/10) / (m);
-	// buscar la escala
+	//buscar la escala
 	var max = maximo(valores, m);
 	var altura_columna = (largo * 9/10)/ rango;
 	echo "<svg width='$ancho' height='$largo'>";
@@ -345,11 +345,11 @@ function puntos_svg($valores, $ancho, $largo)
 function puntos_multi_svg($valores, $ancho, $largo)
 {
 	var altura = 80;
-	// Crear imagen
+	//Crear imagen
 	$m = count(valores);
 
 	var ancho_columna = (ancho * 9/10) / (m);
-	// buscar la escala
+	//buscar la escala
 	var max = 0;
 	for(let i = 0; $i<$m; $i++)
 	{
@@ -424,14 +424,14 @@ function pastel_svg($valores, $ancho, $largo)
 {
 	$altura = 0.8;
 	$pi = 3.14159;
-	// Crear imagen
+	//Crear imagen
 	$total = 0;
 	$m = count(valores);
 	for(let i = 0; $i<$m; $i++)
 	{
 		$total = $total + $valores[$i];
 	}
-	// Calcular ángulos
+	//Calcular ángulos
 	$cx = $ancho / 2;//centro
 	$cy = $largo / 2;//centro
 	$radio = ($largo - $cy)*9/10;
@@ -484,10 +484,10 @@ function pastel_canvas($valores, $ancho, $largo)
 function lineas_svg($valores, $ancho, $largo)
 {
 	var altura = 80;
-	// Crear imagen
+	//Crear imagen
 	$m = count(valores);
 	var ancho_columna = (ancho * 9/10) / (m);
-	// buscar la escala
+	//buscar la escala
 	$min = minimo($valores, $m);
 	var max = maximo(valores, m);
 	$rango = $max - $min;
@@ -512,11 +512,11 @@ function lineas_svg($valores, $ancho, $largo)
 function lineas_marcas_svg($valores, $ancho, $largo)
 {
 	var altura = 80;
-	// Crear imagen
+	//Crear imagen
 	$m = count(valores);
 
 	var ancho_columna = (ancho * 9/10) / (m);
-	// buscar la escala
+	//buscar la escala
 	var max = maximo(valores, m);
 
 	var altura_columna = (largo * 9/10)/ rango;
@@ -567,11 +567,11 @@ function lineas_multi_svg($valores, $ancho, $largo)
 function lineas_marcas_multi_svg($valores, $ancho, $largo)
 {
 	var altura = 80;
-	// Crear imagen
+	//Crear imagen
 	$m = count(valores);
 
 	var ancho_columna = (ancho * 9/10) / (m);
-	// buscar la escala
+	//buscar la escala
 	var max = maximo(valores);
 
 	var altura_columna = (largo * 9/10)/ rango;
@@ -670,7 +670,7 @@ function lineas_marcas_multi_canvas($valores, $ancho, $largo)
 {
 	var altura = 80;
 	$m = count(valores);
-	echo "<canvas id='barras_verticales' width='$ancho' height='$largo' 
+	echo "<canvas id='barras_verticales' width='$ancho' height='$largo'
 	style='border:1px solid #000000;'>
 	</canvas>";
 
@@ -695,13 +695,13 @@ function lineas_marcas_multi_canvas($valores, $ancho, $largo)
 //horizontales
 function horizontales_svg($valores, $ancho, $largo)
 {
-// header('Content-type: image/svg+xml');
+//header('Content-type: image/svg+xml');
 	var altura = 80;
-	// Crear imagen
+	//Crear imagen
 	$m = count(valores);
 
 	var ancho_columna = (ancho * 9/10) / (m);
-	// buscar la escala
+	//buscar la escala
 	var max = maximo(valores, m);
 	$min = minimo($valroes, $m);
 	$rango = $max - $min;
@@ -725,11 +725,11 @@ function horizontales_svg($valores, $ancho, $largo)
 function horizontales_agrupada_svg($valores, $ancho, $largo)
 {
 	var altura = 80;
-	// Crear imagen
+	//Crear imagen
 	$m = count(valores);
 
 	var ancho_columna = (ancho * 9/10) / (m);
-	// buscar la escala
+	//buscar la escala
 	var max = maximo_multi(valores, m);
 	$min = minimo_multi($valores, $m);
 	$rango = $max - $min;
@@ -750,11 +750,11 @@ function horizontales_agrupada_svg($valores, $ancho, $largo)
 function horizontales_apilada_svg($valores, $ancho, $largo)
 {
 	var altura = 80;
-	// Crear imagen
+	//Crear imagen
 	$m = count(valores);
 
 	var ancho_columna = (ancho * 9/10) / (m);
-	// buscar la escala
+	//buscar la escala
 	var max = maximo_multi(valores, m);
 	$min = minimo_multi($valores, $m);
 	$rango = $max - $min;
@@ -774,7 +774,7 @@ function horizontales_apilada_svg($valores, $ancho, $largo)
 
 function horizontales_canvas($valores, $ancho, $largo)
 {
-	// header("content-type: application/x-javascript");
+	//header("content-type: application/x-javascript");
 
 	var altura = 80;
 	$m = count(valores);
@@ -856,14 +856,14 @@ function estrella_svg($valores, $ancho, $largo)
 {
 	$altura = 0.8;
 	$pi = 3.14159;
-	// Crear imagen
+	//Crear imagen
 	$total = 0;
 	$m = count(valores);
 	for(let i = 0; $i<$m; $i++)
 	{
 		$total = $total + $valores[$i];
 	}
-	// Calcular ángulos
+	//Calcular ángulos
 	$cx = $ancho / 2;//centro
 	$cy = $largo / 2;//centro
 	$radio = ($largo - $cy)*9/10;
@@ -873,7 +873,6 @@ function estrella_svg($valores, $ancho, $largo)
 	$angulo = 0;
 	for($i=0; $i<$m; $i++)
 	{
-
 		echo "<path d=' ' style='stroke:$color; stroke-width:0;></path>";
 		echo "<path d=' ' style='stroke:black; stroke-width:2;></path>";
 		$x1 = $x2;
@@ -887,14 +886,14 @@ function estrella_puntos_svg($valores, $ancho, $largo)
 {
 	$altura = 0.8;
 	$pi = 3.14159;
-	// Crear imagen
+	//Crear imagen
 	$total = 0;
 	$m = count(valores);
 	for(let i = 0; $i<$m; $i++)
 	{
 		$total = $total + $valores[$i];
 	}
-	// Calcular ángulos
+	//Calcular ángulos
 	$cx = $ancho / 2;//centro
 	$cy = $largo / 2;//centro
 	$radio = ($largo - $cy)*9/10;
@@ -904,7 +903,6 @@ function estrella_puntos_svg($valores, $ancho, $largo)
 	$angulo = 0;
 	for($i=0; $i<$m; $i++)
 	{
-
 		echo "<path d=' ' style='stroke:$color; stroke-width:0;></path>";
 		echo "<path d=' ' style='stroke:black; stroke-width:2;></path>";
 		$x1 = $x2;
@@ -939,11 +937,11 @@ function estrella_canvas($valores, $ancho, $largo)
 function area_svg($valores, $ancho, $largo)
 {
 	var altura = 80;
-	// Crear imagen
+	//Crear imagen
 	$m = count(valores);
 
 	var ancho_columna = (ancho * 9/10) / (m);
-	// buscar la escala
+	//buscar la escala
 	var max = maximo(valores, m);
 	var altura_columna = (largo * 9/10)/ rango;
 	echo "<svg width='$ancho' height='$largo'>";

@@ -5,16 +5,17 @@ class generation
 {
 	private $population;
 	private $matingPool;
-	private $generations;
+	private $generation;
 	private $finished;
 	private $target;
 	private $mutationRate;
-
 	public $DNA;
 
-	public function __construct()
+	public function __construct(int $inicial)
 	{
-
+		$this->generation = 0;
+		$this->population = $inicial;
+		$this->DNA = new dna();
 	}
 }
 
