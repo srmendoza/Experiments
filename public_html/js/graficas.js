@@ -553,7 +553,7 @@ function lineas_multi_svg($valores, $ancho, $largo)
 
 	echo "<svg width='$ancho' height='$largo'>";
 
-	for($i=0;$i<$m;$i++)
+	for($i=0; $i<$m; $i++)
 	{
 		$x2;
 		$y2;
