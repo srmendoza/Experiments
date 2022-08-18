@@ -1,5 +1,5 @@
 <?php
-include("../../mathcrypto/matematicas/bigcalculator.php");
+require("../../mathcrypto/matematicas/bigcalculator.php");
 $calc = new big_calculator();
 ?>
 <!DOCtype html>
