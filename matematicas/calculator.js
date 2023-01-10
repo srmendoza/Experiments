@@ -1,4 +1,4 @@
-var fact = 10**6;
+var fact = 1000;
 
 function reordenar(result, i)
 {
@@ -93,7 +93,8 @@ function exponente(x, y)
 		y = (int)(y/2);
 	}
 	var tam2 = exponent.length;
-	var sumandos[0] = x;
+	var sumandos = [];
+	sumandos[0] = x;
 	for(i=1; i<tam2; i++)
 	{
 		sumandos[i] = multiplicacion(sumandos[i-1],sumandos[i-1]);

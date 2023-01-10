@@ -23,7 +23,7 @@ function fibbonacci(n)//sucesión de fibbonacci usando un ciclo for
 	return num[n];
 }
 
-function credec(num, &$ser, &$k)//revisar
+function credec(num, ser, k)//revisar
 {
 	var max = (num / 2) + (num % 2);
 	if((ser % num) < max)
@@ -846,7 +846,7 @@ function dichirel(x)
 
 function matrizs(x)//revisar
 {
-	var mat = [][];
+	var mat = [];
 	for(let i = 0; i < x; i++)
 	{
 		for(let j = 0; j < x; j++)
@@ -859,7 +859,7 @@ function matrizs(x)//revisar
 
 function matesc(x)//revisar
 {
-	var mat = [][];
+	var mat = [];
 	var cont = 1;
 	var i = 0;
 	while(i < x)
@@ -906,7 +906,7 @@ function multinomial(x)
 	return num;
 }
 
-function permlist(x, s)//revisar permuta una lista
+function permlist(x, s)//revisa permuta una lista
 {
 	var n = s.length;
 	for(let j = 1; j < n; j++)

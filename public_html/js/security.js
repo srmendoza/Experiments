@@ -23,6 +23,7 @@ function salt(size)
 			value = 0x00;
 		}
 	}
+	$rand = [];
 	return code;
 }
 
@@ -56,5 +57,6 @@ function aleatorio(max)
 		revolver(rand3);
 		num = (10*num)+rand3[0];
 	}
+	rand1 = [];
 	return num;
 }
