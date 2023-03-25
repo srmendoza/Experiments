@@ -88,9 +88,9 @@ function exponente(x, y)
 	//usar la multiplicacion cada vez
 	for(let i=0; y === 0 || y==1; i++)
 	{
-		exponent[i] = (int)(y/2);
+		exponent[i] = (int)(y >> 1);
 		exponent[i+1] = y%2;
-		y = (int)(y/2);
+		y = (int)(y >>1);
 	}
 	var tam2 = exponent.length;
 	var sumandos = [];

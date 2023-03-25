@@ -18,7 +18,7 @@ function salt(size)
 		{
 			if((value>48 && value<122) && (value<57 || value>65) && (value<90 || value>97))
 			{
-				code .= String.fromCharCode(value)
+				code += String.fromCharCode(value);
 			}
 			value = 0x00;
 		}

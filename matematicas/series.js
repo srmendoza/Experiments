@@ -3,7 +3,7 @@ function sumando(x)//sumas sucesivas de números
 	var num = 1;
 	if(x > 1)
 	{
-		num = (x * (x + 1)) / 2;
+		num = (x * (x + 1)) >> 1;
 	}
 	return num;
 }
@@ -25,7 +25,7 @@ function fibbonacci(n)//sucesión de fibbonacci usando un ciclo for
 
 function credec(num, ser, k)//revisar
 {
-	var max = (num / 2) + (num % 2);
+	var max = (num >> 1) + (num % 2);
 	if((ser % num) < max)
 	{
 		k++;
@@ -97,7 +97,7 @@ function fibbonaccimat(x)//realiza la sucesión de fibbonacci con matrices
 		b1 = b;
 		c1 = c;
 		d1 = d;
-		i = i / 2;
+		i = i >> 1;
 	}
 	return (a + b);
 }
@@ -433,7 +433,7 @@ function fibbo(x, y)
 		b1 = b;
 		c1 = c;
 		d1 = d;
-		i = i / 2;
+		i = i >> 1;
 	}
 	num = ((a * y) + (b * (y + 1)));
 	return num;
