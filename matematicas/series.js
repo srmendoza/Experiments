@@ -174,7 +174,7 @@ function multg(x)//revisar
 	return num;
 }
 
-function rares(x)//revisar
+function central_binomial(x)//revisar
 {
 	var num = 1;
 	if(x>0)

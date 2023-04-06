@@ -1,8 +1,4 @@
 {
-/*
-series de numeros
-*/
-
 "series" : [
 {"nombre" : "factorial",
 "0":"1",
@@ -18,7 +14,7 @@ series de numeros
 "10":"3628800",
 "11":""
 },
-{"nombre" : "prime"
+{"nombre" : "prime",
 "1":"2",
 "2":"3",
 "3":"5",
